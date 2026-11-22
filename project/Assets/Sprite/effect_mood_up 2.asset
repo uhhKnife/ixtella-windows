@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_mood_up 2
   m_Rect:
     serializedVersion: 2
-    x: 668.0761
-    y: 822.0761
-    width: 248.84776
-    height: 138.84778
-  m_Offset: {x: 7.5000005, y: -187.5}
+    x: 640
+    y: 704
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.5301389, y: -0.85039973}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 822.0761
       width: 248.84776
       height: 138.84778
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 28.07611, y: 118.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 800, z: 1, w: 704}

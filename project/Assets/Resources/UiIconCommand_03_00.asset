@@ -8,14 +8,14 @@ Sprite:
   m_Name: UiIconCommand_03_00
   m_Rect:
     serializedVersion: 2
-    x: 19.07612
-    y: 35.076122
-    width: 178.84775
-    height: 148.84775
-  m_Offset: {x: 1.5000119, y: 0.5000003}
+    x: 0
+    y: 0
+    width: 220
+    height: 220
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 100
-  m_Pivot: {x: 0.5083871, y: 0.50335914}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 35.076122
       width: 178.84775
       height: 148.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 19.07612, y: 35.076122}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 100, y: 110, z: 100, w: 110}

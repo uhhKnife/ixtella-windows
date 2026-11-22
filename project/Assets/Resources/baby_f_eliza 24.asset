@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_f_eliza 24
   m_Rect:
     serializedVersion: 2
-    x: 43.076122
-    y: 456.0761
-    width: 233.84776
-    height: 278.84778
-  m_Offset: {x: -6.9692064E-06, y: -147.5}
+    x: 0
+    y: 448
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.49999997, y: -0.028962435}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 456.0761
       width: 233.84776
       height: 278.84778
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 43.076122, y: 8.076111}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 160, z: 1, w: 448}

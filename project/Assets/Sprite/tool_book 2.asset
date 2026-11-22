@@ -8,14 +8,14 @@ Sprite:
   m_Name: tool_book 2
   m_Rect:
     serializedVersion: 2
-    x: 698.0761
-    y: 817.0761
-    width: 203.84776
-    height: 128.84775
-  m_Offset: {x: 1.21502735E-05, y: -17.499987}
+    x: 640
+    y: 704
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.50000006, y: 0.3641809}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 817.0761
       width: 203.84776
       height: 128.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 58.07611, y: 113.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 800, z: 1, w: 864}

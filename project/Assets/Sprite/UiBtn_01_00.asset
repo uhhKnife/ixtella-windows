@@ -8,14 +8,14 @@ Sprite:
   m_Name: UiBtn_01_00
   m_Rect:
     serializedVersion: 2
-    x: 1.0761205
+    x: 0
     y: 0
-    width: 121.84776
-    height: 112.92388
-  m_Offset: {x: -3.6313463E-06, y: 5.5380588}
-  m_Border: {x: 60.923878, y: 0, z: 60.923885, w: 0}
+    width: 124
+    height: 124
+  m_Offset: {x: 0, y: 0}
+  m_Border: {x: 62, y: 0, z: 62, w: 0}
   m_PixelsToUnits: 100
-  m_Pivot: {x: 0.49999997, y: 0.5490424}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 0
       width: 121.84776
       height: 112.92388
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 1.0761205, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 100, y: 62, z: 100, w: 62}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_joy 1
   m_Rect:
     serializedVersion: 2
-    x: 343.0761
-    y: 360.0761
-    width: 273.84778
-    height: 73.84775
-  m_Offset: {x: 0, y: -204.99997}
+    x: 320
+    y: 192
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.5, y: -2.2759814}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 360.0761
       width: 273.84778
       height: 73.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 23.07611, y: 168.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 480, z: 1, w: 192}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: UiImgNonplus_00_00
   m_Rect:
     serializedVersion: 2
-    x: 39.076122
-    y: 25.07612
-    width: 126.84775
-    height: 142.84775
-  m_Offset: {x: -2.4999957, y: 3.50001}
+    x: 0
+    y: 0
+    width: 200
+    height: 200
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 100
-  m_Pivot: {x: 0.48029137, y: 0.5245017}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 25.07612
       width: 126.84775
       height: 142.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 39.076122, y: 25.07612}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 100, y: 100, z: 100, w: 100}

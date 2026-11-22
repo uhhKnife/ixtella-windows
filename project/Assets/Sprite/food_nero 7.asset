@@ -8,14 +8,14 @@ Sprite:
   m_Name: food_nero 7
   m_Rect:
     serializedVersion: 2
-    x: 1058.0762
-    y: 387.0761
-    width: 123.84778
-    height: 83.84776
-  m_Offset: {x: -120.00006, y: -44.999992}
+    x: 800
+    y: 384
+    width: 400
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: -0.46893188, y: -0.036686856}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 387.0761
       width: 123.84778
       height: 83.84776
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 258.07617, y: 3.0761108}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1000, z: 1, w: 384}

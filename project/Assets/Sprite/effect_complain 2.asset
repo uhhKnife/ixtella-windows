@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_complain 2
   m_Rect:
     serializedVersion: 2
-    x: 333.0761
-    y: 109.07612
-    width: 128.84775
-    height: 133.84775
-  m_Offset: {x: 2.500015, y: -79.99999}
+    x: 320
+    y: 96
+    width: 160
+    height: 160
+  m_Offset: {x: 0, y: -80}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.51940286, y: -0.09769397}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 109.07612
       width: 128.84775
       height: 133.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 13.076111, y: 13.076118}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 400, z: 1, w: 96}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_m_p_blink 3
   m_Rect:
     serializedVersion: 2
-    x: 103.07612
-    y: 472.0761
-    width: 113.847755
-    height: 33.847763
-  m_Offset: {x: 6.785855E-06, y: -104.99999}
+    x: 0
+    y: 384
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.50000006, y: -2.602125}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 472.0761
       width: 113.847755
       height: 33.847763
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 103.07612, y: 88.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 160, z: 1, w: 384}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_sleep 1
   m_Rect:
     serializedVersion: 2
-    x: 538.0761
-    y: 892.0761
-    width: 63.847763
-    height: 73.84776
-  m_Offset: {x: -89.99999, y: -224.99998}
+    x: 320
+    y: 704
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: -0.9096029, y: -2.5468085}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 892.0761
       width: 63.847763
       height: 73.84776
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 218.07611, y: 188.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 480, z: 1, w: 704}

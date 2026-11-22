@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_song 2
   m_Rect:
     serializedVersion: 2
-    x: 38.076122
-    y: 407.0761
-    width: 333.84778
-    height: 258.84778
-  m_Offset: {x: -5.000011, y: -152.5}
+    x: 0
+    y: 384
+    width: 400
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.48502308, y: -0.08914935}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 407.0761
       width: 333.84778
       height: 258.84778
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 38.076122, y: 23.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 200, z: 1, w: 384}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: tool_ball 9
   m_Rect:
     serializedVersion: 2
-    x: 2038.0762
-    y: 3179.0762
-    width: 83.847755
-    height: 83.84778
-  m_Offset: {x: 159.99995, y: -85.00006}
+    x: 1920
+    y: 2816
+    width: 640
+    height: 640
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 2.4082198, y: -0.51374257}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 3179.0762
       width: 83.847755
       height: 83.84778
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 118.07617, y: 363.07617}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 2240, z: 1, w: 3136}

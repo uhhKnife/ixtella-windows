@@ -8,14 +8,14 @@ Sprite:
   m_Name: UiIconGenderF_00_00
   m_Rect:
     serializedVersion: 2
-    x: 21.07612
+    x: 0
     y: 0
-    width: 188.92387
+    width: 210
     height: 112
-  m_Offset: {x: -10.538054, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 100
-  m_Pivot: {x: 0.44422063, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 0
       width: 188.92387
       height: 112
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 21.07612, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 100, y: 105, z: 100, w: 56}

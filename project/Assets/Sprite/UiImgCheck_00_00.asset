@@ -8,14 +8,14 @@ Sprite:
   m_Name: UiImgCheck_00_00
   m_Rect:
     serializedVersion: 2
-    x: 19.02675
-    y: 24.036285
-    width: 62.946503
-    height: 51.936966
-  m_Offset: {x: -0.50000125, y: -0.004768902}
+    x: 0
+    y: 0
+    width: 100
+    height: 100
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 100
-  m_Pivot: {x: 0.49205673, y: 0.49990818}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 24.036285
       width: 62.946503
       height: 51.936966
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 19.02675, y: 24.036285}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 100, y: 50, z: 100, w: 50}

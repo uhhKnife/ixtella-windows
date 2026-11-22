@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_f_tamamo 14
   m_Rect:
     serializedVersion: 2
-    x: 688.0761
-    y: 1091.0762
-    width: 223.84776
-    height: 248.84775
-  m_Offset: {x: 1.3342366E-05, y: -127.50004}
+    x: 640
+    y: 1088
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.50000006, y: -0.012361662}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 1091.0762
       width: 223.84776
       height: 248.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 48.07611, y: 3.0761719}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 800, z: 1, w: 1088}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_f_nero 4
   m_Rect:
     serializedVersion: 2
-    x: 1358.0762
-    y: 1736.0762
-    width: 178.84778
-    height: 223.84775
-  m_Offset: {x: -7.500061, y: -120.000046}
+    x: 1280
+    y: 1728
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.45806456, y: -0.036078863}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 1736.0762
       width: 178.84778
       height: 223.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 78.07617, y: 8.076172}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1440, z: 1, w: 1728}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: tool_diaper 3
   m_Rect:
     serializedVersion: 2
-    x: 558.0761
-    y: 265.0761
-    width: 83.84775
-    height: 63.847755
-  m_Offset: {x: 1.4993146E-05, y: -24.999989}
+    x: 400
+    y: 192
+    width: 400
+    height: 160
+  m_Offset: {x: 0, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.5000002, y: 0.10844374}
+  m_Pivot: {x: 0.5, y: 0.5}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 265.0761
       width: 83.84775
       height: 63.847755
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 158.07611, y: 73.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 600, z: 1, w: 272}

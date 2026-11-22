@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_cure_ring_b 9
   m_Rect:
     serializedVersion: 2
-    x: 1038.0762
-    y: 622.0761
-    width: 163.84775
-    height: 8.847748
-  m_Offset: {x: -4.394739E-05, y: -242.49998}
+    x: 960
+    y: 384
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.49999973, y: -26.908104}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 622.0761
       width: 163.84775
       height: 8.847748
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 78.07617, y: 238.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1120, z: 1, w: 384}

@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_cure_spark 4
   m_Rect:
     serializedVersion: 2
-    x: 1283.0762
-    y: 797.0761
-    width: 248.84775
-    height: 143.84775
-  m_Offset: {x: 32.499954, y: -165}
+    x: 1280
+    y: 704
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.63060176, y: -0.647046}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 797.0761
       width: 248.84775
       height: 143.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 3.0761719, y: 93.07611}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1440, z: 1, w: 704}

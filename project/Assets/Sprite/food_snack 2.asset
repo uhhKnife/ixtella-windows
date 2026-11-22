@@ -8,14 +8,14 @@ Sprite:
   m_Name: food_snack 2
   m_Rect:
     serializedVersion: 2
-    x: 998.0761
-    y: 717.0761
-    width: 258.84778
-    height: 108.84776
-  m_Offset: {x: 72.50001, y: -67.49999}
+    x: 960
+    y: 704
+    width: 480
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.7800874, y: -0.1201321}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 717.0761
       width: 258.84778
       height: 108.84776
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 38.07611, y: 13.076111}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1200, z: 1, w: 704}

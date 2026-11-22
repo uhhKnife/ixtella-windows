@@ -8,14 +8,14 @@ Sprite:
   m_Name: effect_achieve_spark 8
   m_Rect:
     serializedVersion: 2
-    x: 1248.0762
-    y: 1296.0762
-    width: 18.84776
-    height: 18.84776
-  m_Offset: {x: 142.49994, y: -57.500053}
+    x: 1200
+    y: 1248
+    width: 400
+    height: 400
+  m_Offset: {x: 0, y: -200}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 8.060577, y: -2.5507634}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 1296.0762
       width: 18.84776
       height: 18.84776
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 48.07617, y: 48.07617}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1400, z: 1, w: 1248}

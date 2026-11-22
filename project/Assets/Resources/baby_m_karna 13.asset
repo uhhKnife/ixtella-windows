@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_m_karna 13
   m_Rect:
     serializedVersion: 2
-    x: 373.0761
-    y: 1101.0762
-    width: 238.84776
-    height: 188.84775
-  m_Offset: {x: -12.4999895, y: -107.500046}
+    x: 320
+    y: 1088
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.44766545, y: -0.069241874}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 1101.0762
       width: 238.84776
       height: 188.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 53.07611, y: 13.076172}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 480, z: 1, w: 1088}

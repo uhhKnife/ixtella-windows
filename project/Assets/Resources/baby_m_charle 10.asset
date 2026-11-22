@@ -8,14 +8,14 @@ Sprite:
   m_Name: baby_m_charle 10
   m_Rect:
     serializedVersion: 2
-    x: 1353.0762
-    y: 1421.0762
-    width: 173.84775
-    height: 208.84775
-  m_Offset: {x: -4.66296E-05, y: -117.500046}
+    x: 1280
+    y: 1408
+    width: 320
+    height: 320
+  m_Offset: {x: 0, y: -160}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 1
-  m_Pivot: {x: 0.49999973, y: -0.06261103}
+  m_Pivot: {x: 0.5, y: 0}
   m_Extrude: 1
   m_IsPolygon: 0
   m_AtlasName:
@@ -83,7 +83,7 @@ Sprite:
       y: 1421.0762
       width: 173.84775
       height: 208.84775
-    textureRectOffset: {x: 0, y: 0}
+    textureRectOffset: {x: 73.07617, y: 13.076172}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 64
     uvTransform: {x: 1, y: 1440, z: 1, w: 1408}
