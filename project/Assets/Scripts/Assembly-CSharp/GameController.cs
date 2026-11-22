@@ -58,7 +58,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
 	private void Update()
 	{
-		if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape) && Define.IsActiveScene(Define.SceneId.SCENE_TITLE) && SingletonMonoBehaviour<MenuController>.Instance.GetCurrentMenuType() == MenuCommonData.MenuType.MENU_NONE && !isDialogLoading_ && !DialogCommonData.ExistsDialogObject(Define.GetSceneName(Define.SceneId.SCENE_TITLE)))
+		if ((Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor) && Input.GetKeyDown(KeyCode.Escape) && Define.IsActiveScene(Define.SceneId.SCENE_TITLE) && SingletonMonoBehaviour<MenuController>.Instance.GetCurrentMenuType() == MenuCommonData.MenuType.MENU_NONE && !isDialogLoading_ && !DialogCommonData.ExistsDialogObject(Define.GetSceneName(Define.SceneId.SCENE_TITLE)))
 		{
 			StartCoroutine(OpenGameQuitDialog());
 		}

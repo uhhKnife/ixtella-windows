@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Assets.SimpleAndroidNotifications
 {
+	// [PC port] Android plugin calls are compiled only for Android; elsewhere these only
+	// track ids (NotificationIdHandler), so the game logic is unchanged.
 	public static class NotificationManager
 	{
 		public const string FullClassName = "com.hippogames.simpleandroidnotifications.Controller";
@@ -50,32 +52,44 @@ namespace Assets.SimpleAndroidNotifications
 		{
 			long num = (long)notificationParams.Delay.TotalMilliseconds;
 			long num2 = ((!notificationParams.Repeat) ? 0 : ((long)notificationParams.RepeatInterval.TotalMilliseconds));
+#if UNITY_ANDROID && !UNITY_EDITOR
 			string text = string.Join(",", notificationParams.Vibration.Select((int i) => i.ToString()).ToArray());
 			new AndroidJavaClass("com.hippogames.simpleandroidnotifications.Controller").CallStatic("SetNotification", notificationParams.Id, notificationParams.GroupName ?? string.Empty, notificationParams.GroupSummary ?? string.Empty, notificationParams.ChannelId, notificationParams.ChannelName, num, Convert.ToInt32(notificationParams.Repeat), num2, notificationParams.Title, notificationParams.Message, notificationParams.Ticker, Convert.ToInt32(notificationParams.Multiline), Convert.ToInt32(notificationParams.Sound), notificationParams.CustomSound ?? string.Empty, Convert.ToInt32(notificationParams.Vibrate), text, Convert.ToInt32(notificationParams.Light), notificationParams.LightOnMs, notificationParams.LightOffMs, ColotToInt(notificationParams.LightColor), notificationParams.LargeIcon ?? string.Empty, GetSmallIconName(notificationParams.SmallIcon), ColotToInt(notificationParams.SmallIconColor), (int)notificationParams.ExecuteMode, notificationParams.CallbackData, "com.unity3d.player.UnityPlayerActivity");
+#endif
 			NotificationIdHandler.AddScheduledNotificaion(notificationParams.Id);
 			return notificationParams.Id;
 		}
 
 		public static void Cancel(int id)
 		{
+#if UNITY_ANDROID && !UNITY_EDITOR
 			new AndroidJavaClass("com.hippogames.simpleandroidnotifications.Controller").CallStatic("CancelNotification", id);
+#endif
 			NotificationIdHandler.RemoveScheduledNotificaion(id);
 		}
 
 		public static void CancelAll()
 		{
+#if UNITY_ANDROID && !UNITY_EDITOR
 			new AndroidJavaClass("com.hippogames.simpleandroidnotifications.Controller").CallStatic("CancelAllNotifications");
+#endif
 			NotificationIdHandler.RemoveAllScheduledNotificaions();
 		}
 
 		public static void CancelAllDisplayed()
 		{
+#if UNITY_ANDROID && !UNITY_EDITOR
 			new AndroidJavaClass("com.hippogames.simpleandroidnotifications.Controller").CallStatic("CancelAllDisplayedNotifications");
+#endif
 			NotificationIdHandler.RemoveAllScheduledNotificaions();
 		}
 
 		public static NotificationCallback GetNotificationCallback()
 		{
+#if !UNITY_ANDROID || UNITY_EDITOR
+			// [PC port] No Android intents on Windows.
+			return null;
+#else
 			AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject androidJavaObject = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
 			AndroidJavaObject androidJavaObject2 = androidJavaObject.Call<AndroidJavaObject>("getIntent", new object[0]);
@@ -88,6 +102,7 @@ namespace Assets.SimpleAndroidNotifications
 				return notificationCallback;
 			}
 			return null;
+#endif
 		}
 
 		private static int ColotToInt(Color color)

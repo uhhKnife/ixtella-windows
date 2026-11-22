@@ -6,8 +6,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   m_Scenes:
   - enabled: 1
-    path: ./Assets/Scenes/Title.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Title.unity
+    guid: 3ee9fbc2f8076804d9135e027fcf68d2
   - enabled: 1
-    path: ./Assets/Scenes/Main.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/Main.unity
+    guid: 10b9d072674accc42b356c3919488a05

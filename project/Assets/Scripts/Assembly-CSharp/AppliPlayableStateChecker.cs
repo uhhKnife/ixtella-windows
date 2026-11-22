@@ -245,7 +245,9 @@ public class AppliPlayableStateChecker : MonoBehaviour
 
 	private bool GetPlayableFlagOnCache()
 	{
-		return cachePlayableData_.GetFlag();
+		// [PC port] The unlock server is gone; always treat the game as unlocked
+		// (same change as the offline APK).
+		return true;
 	}
 
 	private bool ExistsPlayableDateOnCache()
