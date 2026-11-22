@@ -1,0 +1,44 @@
+[
+    {
+        "key_": "SATIETY",
+        "init_": "2",
+        "lower_": "0",
+        "upper_": "6"
+    },
+    {
+        "key_": "FEEL",
+        "init_": "2",
+        "lower_": "0",
+        "upper_": "6"
+    },
+    {
+        "key_": "WEIGHT_MALE",
+        "init_": "8.3",
+        "lower_": "5",
+        "upper_": "16"
+    },
+    {
+        "key_": "WEIGHT_FEMALE",
+        "init_": "7.8",
+        "lower_": "5",
+        "upper_": "16"
+    },
+    {
+        "key_": "STRENGTH",
+        "init_": "0",
+        "lower_": "0",
+        "upper_": "99"
+    },
+    {
+        "key_": "INTELLIGENCE",
+        "init_": "0",
+        "lower_": "0",
+        "upper_": "99"
+    },
+    {
+        "key_": "MAGIC",
+        "init_": "0",
+        "lower_": "0",
+        "upper_": "99"
+    }
+]

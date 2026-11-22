@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: food_eliza
+  m_Controller: {fileID: 9100000, guid: 8cb82f719f94a18428f6fc30a700dfa9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 33967639569c00e46b633043eb1cba03, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e3709e14fa63d12448cd611d11460130, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2fa5da4a83d9388459636eb80ef08baf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8b3534757190f1f4ab879f4f6ea68383, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 05c99fc27cf2fcb40997079a2c504dbf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e43361d4878239d4a99e35df3bf31428, type: 2}

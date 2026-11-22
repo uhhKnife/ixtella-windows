@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: food_tamamo
+  m_Controller: {fileID: 9100000, guid: 8cb82f719f94a18428f6fc30a700dfa9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 33967639569c00e46b633043eb1cba03, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 24e81b14b5ed83c4e9e079f351f89bd5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 05c99fc27cf2fcb40997079a2c504dbf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4e71b0db68f164e4e8d0b837ee79c6d4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2fa5da4a83d9388459636eb80ef08baf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d476a51845b4c4e47b12f4463c9a84a1, type: 2}

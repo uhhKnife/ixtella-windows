@@ -1,0 +1,102 @@
+[
+    {
+        "key_": "CH001",
+        "str_": "4",
+        "int_": "0",
+        "magic_": "0",
+        "isMaleMasterWearable_": "0",
+        "isFemaleMasterWearable_": "1",
+        "costumeId_": "baby_f_nero",
+        "sortIndex_": "0"
+    },
+    {
+        "key_": "CH002",
+        "str_": "0",
+        "int_": "4",
+        "magic_": "0",
+        "isMaleMasterWearable_": "0",
+        "isFemaleMasterWearable_": "1",
+        "costumeId_": "baby_f_tamamo",
+        "sortIndex_": "1"
+    },
+    {
+        "key_": "CH003",
+        "str_": "44",
+        "int_": "44",
+        "magic_": "24",
+        "isMaleMasterWearable_": "0",
+        "isFemaleMasterWearable_": "1",
+        "costumeId_": "baby_f_altera",
+        "sortIndex_": "2"
+    },
+    {
+        "key_": "CH004",
+        "str_": "28",
+        "int_": "0",
+        "magic_": "12",
+        "isMaleMasterWearable_": "0",
+        "isFemaleMasterWearable_": "1",
+        "costumeId_": "baby_f_eliza",
+        "sortIndex_": "3"
+    },
+    {
+        "key_": "CH006",
+        "str_": "0",
+        "int_": "4",
+        "magic_": "0",
+        "isMaleMasterWearable_": "1",
+        "isFemaleMasterWearable_": "0",
+        "costumeId_": "baby_m_mumei",
+        "sortIndex_": "1"
+    },
+    {
+        "key_": "CH007",
+        "str_": "40",
+        "int_": "48",
+        "magic_": "24",
+        "isMaleMasterWearable_": "1",
+        "isFemaleMasterWearable_": "0",
+        "costumeId_": "baby_m_karna",
+        "sortIndex_": "3"
+    },
+    {
+        "key_": "CH008",
+        "str_": "84",
+        "int_": "96",
+        "magic_": "54",
+        "isMaleMasterWearable_": "1",
+        "isFemaleMasterWearable_": "0",
+        "costumeId_": "baby_m_gilgamesh",
+        "sortIndex_": "4"
+    },
+    {
+        "key_": "CH009",
+        "str_": "20",
+        "int_": "20",
+        "magic_": "12",
+        "isMaleMasterWearable_": "1",
+        "isFemaleMasterWearable_": "0",
+        "costumeId_": "baby_m_cuchulainn",
+        "sortIndex_": "2"
+    },
+    {
+        "key_": "CH016",
+        "str_": "92",
+        "int_": "92",
+        "magic_": "54",
+        "isMaleMasterWearable_": "0",
+        "isFemaleMasterWearable_": "1",
+        "costumeId_": "baby_f_altria",
+        "sortIndex_": "4"
+    },
+    {
+        "key_": "CH024",
+        "str_": "4",
+        "int_": "0",
+        "magic_": "0",
+        "isMaleMasterWearable_": "1",
+        "isFemaleMasterWearable_": "0",
+        "costumeId_": "baby_m_charle",
+        "sortIndex_": "0"
+    }
+]

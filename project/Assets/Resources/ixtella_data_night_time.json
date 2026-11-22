@@ -1,0 +1,20 @@
+[
+    {
+        "key_": "SLEEPABLE_TIME",
+        "hour_": "21",
+        "minute_": "0",
+        "second_": "0"
+    },
+    {
+        "key_": "FORCE_SLEEP_TIME",
+        "hour_": "23",
+        "minute_": "0",
+        "second_": "0"
+    },
+    {
+        "key_": "WAKEUP_TIME",
+        "hour_": "9",
+        "minute_": "0",
+        "second_": "0"
+    }
+]

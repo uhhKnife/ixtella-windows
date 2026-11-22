@@ -1,0 +1,30 @@
+[
+    {
+        "key_": "INTERVAL_SATIETY",
+        "interval_": "1200"
+    },
+    {
+        "key_": "INTERVAL_FEEL",
+        "interval_": "900"
+    },
+    {
+        "key_": "INTERVAL_SICK",
+        "interval_": "3600"
+    },
+    {
+        "key_": "INTERVAL_SING",
+        "interval_": "1800"
+    },
+    {
+        "key_": "SATIETY_GAME_OVER_LIMIT",
+        "interval_": "18000"
+    },
+    {
+        "key_": "FEEL_GAME_OVER_LIMIT",
+        "interval_": "18000"
+    },
+    {
+        "key_": "SICK_GAME_OVER_LIMIT",
+        "interval_": "18000"
+    }
+]

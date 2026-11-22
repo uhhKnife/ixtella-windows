@@ -1,0 +1,82 @@
+[
+    {
+        "key_": "MILK",
+        "satiety_": "2",
+        "feel_": "0",
+        "weight_": "0.12",
+        "str_": "0",
+        "int_": "0",
+        "magic_": "0",
+        "probability_": "100"
+    },
+    {
+        "key_": "SNACK",
+        "satiety_": "0",
+        "feel_": "1",
+        "weight_": "0.24",
+        "str_": "0",
+        "int_": "0",
+        "magic_": "1",
+        "probability_": "100"
+    },
+    {
+        "key_": "SPECIAL_NERO",
+        "satiety_": "5",
+        "feel_": "0",
+        "weight_": "0.24",
+        "str_": "5",
+        "int_": "0",
+        "magic_": "0",
+        "probability_": "33"
+    },
+    {
+        "key_": "SPECIAL_TAMAMO",
+        "satiety_": "5",
+        "feel_": "0",
+        "weight_": "0.24",
+        "str_": "0",
+        "int_": "5",
+        "magic_": "0",
+        "probability_": "33"
+    },
+    {
+        "key_": "SPECIAL_ELIZA",
+        "satiety_": "5",
+        "feel_": "-3",
+        "weight_": "0.12",
+        "str_": "0",
+        "int_": "0",
+        "magic_": "0",
+        "probability_": "34"
+    },
+    {
+        "key_": "BALL",
+        "satiety_": "0",
+        "feel_": "1",
+        "weight_": "-0.05",
+        "str_": "4",
+        "int_": "0",
+        "magic_": "0",
+        "probability_": "100"
+    },
+    {
+        "key_": "BOOK",
+        "satiety_": "0",
+        "feel_": "1",
+        "weight_": "0",
+        "str_": "0",
+        "int_": "4",
+        "magic_": "0",
+        "probability_": "100"
+    },
+    {
+        "key_": "SING",
+        "satiety_": "0",
+        "feel_": "1",
+        "weight_": "-0.02",
+        "str_": "0",
+        "int_": "0",
+        "magic_": "6",
+        "probability_": "100"
+    }
+]

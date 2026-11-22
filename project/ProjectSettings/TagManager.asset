@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fader
+  - SceneController
+  - MenuController
+  - BgmController
+  - SeController
+  - MenuCanvas
+  - StatusUI
+  - DialogCanvas
+  - PlayableStateChecker
+  - DateTimeObserber
+  - MainCanvas
+  - CharacterBackground
+  - Letter
+  - LocalPush
+  - PlayerCanvas
+  - PlayerBGCanvas
+  - TouchScreen
+  - TitleBgCanvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Item
+  - Character
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Back
+    uniqueID: 679454193
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Front
+    uniqueID: 674288025
+    locked: 0

@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!213 &21300000
+Sprite:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: baby_m_cuchulainn 1
+  m_Rect:
+    serializedVersion: 2
+    x: 393.0761
+    y: 1741.0762
+    width: 173.84775
+    height: 188.84775
+  m_Offset: {x: 1.0362133E-05, y: -107.500046}
+  m_Border: {x: 0, y: 0, z: 0, w: 0}
+  m_PixelsToUnits: 1
+  m_Pivot: {x: 0.50000006, y: -0.069241874}
+  m_Extrude: 1
+  m_IsPolygon: 0
+  m_AtlasName:
+  m_PackingTag:
+  m_RenderDataKey:
+    3e2fdd8fe7b9ac346b8369c7fa1e4f84: 21300002
+  m_AtlasTags: []
+  m_SpriteAtlas: {fileID: 0}
+  m_RD:
+    serializedVersion: 2
+    texture: {fileID: 2800000, guid: 2768b787d4603ea43a7c72d277e0398a, type: 3}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes:
+    - serializedVersion: 2
+      firstByte: 0
+      indexCount: 24
+      topology: 0
+      firstVertex: 0
+      vertexCount: 10
+      localAABB:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+    m_IndexBuffer: 090008000600070006000800040006000700050006000400010005000400030001000400000001000300020001000000
+    m_VertexData:
+      m_CurrentChannels: 9
+      m_VertexCount: 10
+      m_Channels:
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 3
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 12
+        format: 0
+        dimension: 2
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      m_DataSize: 200
+      _typelessdata: 0000a642000022430000000000000000000000000000ae42000070420000000000000000000000000000ae4200000d43000000000000000000000000000070420000464300000000000000000000000000003c4200004a4300000000000000000000000000003c420000504100000000000000000000000000002cc200005041000000000000000000000000000044c200004a430000000000000000000000000000aec2000025430000000000000000000000000000aec200007442000000000000000000000000
+    textureRect:
+      serializedVersion: 2
+      x: 393.0761
+      y: 1741.0762
+      width: 173.84775
+      height: 188.84775
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 1, y: 480, z: 1, w: 1728}
+    downscaleMultiplier: 1
+  m_AtlasRD:
+    serializedVersion: 2
+    texture: {fileID: 0}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes: []
+    m_IndexBuffer:
+    m_VertexData:
+      m_CurrentChannels: 0
+      m_VertexCount: 0
+      m_Channels: []
+      m_DataSize: 0
+      _typelessdata:
+    textureRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: 0, y: 0}
+    settingsRaw: 0
+    uvTransform: {x: 0, y: 0, z: 0, w: 0}
+    downscaleMultiplier: 0
+  m_PhysicsShape:
+  - - {x: 47, y: 22}
+    - {x: 56, y: 32}
+    - {x: 57, y: 35}
+    - {x: 58, y: 46}
+    - {x: 54, y: 52}
+    - {x: 40, y: 62}
+    - {x: 51, y: 62}
+    - {x: 52, y: 59}
+    - {x: 61, y: 57}
+    - {x: 66, y: 62}
+    - {x: 87, y: 79}
+    - {x: 87, y: 91}
+    - {x: 83, y: 93}
+    - {x: 83, y: 126}
+    - {x: 78, y: 128}
+    - {x: 77, y: 160}
+    - {x: 75, y: 162}
+    - {x: 73, y: 171}
+    - {x: 68, y: 173}
+    - {x: 68, y: 181}
+    - {x: 64, y: 187}
+    - {x: 56, y: 192}
+    - {x: 35, y: 202}
+    - {x: -35, y: 202}
+    - {x: -37, y: 200}
+    - {x: -46, y: 198}
+    - {x: -48, y: 193}
+    - {x: -56, y: 193}
+    - {x: -62, y: 189}
+    - {x: -67, y: 181}
+    - {x: -77, y: 160}
+    - {x: -80, y: 132}
+    - {x: -82, y: 130}
+    - {x: -83, y: 119}
+    - {x: -78, y: 117}
+    - {x: -82, y: 110}
+    - {x: -87, y: 90}
+    - {x: -87, y: 80}
+    - {x: -85, y: 78}
+    - {x: -74, y: 77}
+    - {x: -67, y: 77}
+    - {x: -68, y: 64}
+    - {x: -61, y: 56}
+    - {x: -51, y: 59}
+    - {x: -44, y: 62}
+    - {x: -51, y: 53}
+    - {x: -57, y: 45}
+    - {x: -57, y: 35}
+    - {x: -53, y: 29}
+    - {x: -38, y: 13}
+    - {x: 36, y: 13}

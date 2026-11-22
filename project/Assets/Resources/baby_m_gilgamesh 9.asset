@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!213 &21300000
+Sprite:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: baby_m_gilgamesh 9
+  m_Rect:
+    serializedVersion: 2
+    x: 1033.0762
+    y: 1421.0762
+    width: 173.84775
+    height: 188.84775
+  m_Offset: {x: -4.66296E-05, y: -107.500046}
+  m_Border: {x: 0, y: 0, z: 0, w: 0}
+  m_PixelsToUnits: 1
+  m_Pivot: {x: 0.49999973, y: -0.069241874}
+  m_Extrude: 1
+  m_IsPolygon: 0
+  m_AtlasName:
+  m_PackingTag:
+  m_RenderDataKey:
+    2fca1912a2b305148b9c982e3cd67acc: 21300018
+  m_AtlasTags: []
+  m_SpriteAtlas: {fileID: 0}
+  m_RD:
+    serializedVersion: 2
+    texture: {fileID: 2800000, guid: 5cc6531e127d08145942ceff87971c8e, type: 3}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes:
+    - serializedVersion: 2
+      firstByte: 0
+      indexCount: 30
+      topology: 0
+      firstVertex: 0
+      vertexCount: 12
+      localAABB:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+    m_IndexBuffer: 0b000a000900010009000a00060009000100020006000100080006000200050006000800070006000500040003000100000001000300020001000000
+    m_VertexData:
+      m_CurrentChannels: 9
+      m_VertexCount: 12
+      m_Channels:
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 3
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 12
+        format: 0
+        dimension: 2
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      m_DataSize: 240
+      _typelessdata: 0000a6c200002243000000000000000000000000000096c200009c4200000000000000000000000000005cc200004a430000000000000000000000000000aec20000d2420000000000000000000000000000aec200009c420000000000000000000000000000ae42000022430000000000000000000000000000a842000050410000000000000000000000000000ae420000e0410000000000000000000000000000704200004a430000000000000000000000000000a8c2000050410000000000000000000000000000aec20000f0410000000000000000000000000000aec200006041000000000000000000000000
+    textureRect:
+      serializedVersion: 2
+      x: 1033.0762
+      y: 1421.0762
+      width: 173.84775
+      height: 188.84775
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 1, y: 1120, z: 1, w: 1408}
+    downscaleMultiplier: 1
+  m_AtlasRD:
+    serializedVersion: 2
+    texture: {fileID: 0}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes: []
+    m_IndexBuffer:
+    m_VertexData:
+      m_CurrentChannels: 0
+      m_VertexCount: 0
+      m_Channels: []
+      m_DataSize: 0
+      _typelessdata:
+    textureRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: 0, y: 0}
+    settingsRaw: 0
+    uvTransform: {x: 0, y: 0, z: 0, w: 0}
+    downscaleMultiplier: 0
+  m_PhysicsShape:
+  - - {x: 67, y: 43}
+    - {x: 73, y: 59}
+    - {x: 75, y: 78}
+    - {x: 85, y: 78}
+    - {x: 87, y: 80}
+    - {x: 87, y: 91}
+    - {x: 83, y: 93}
+    - {x: 83, y: 126}
+    - {x: 78, y: 128}
+    - {x: 78, y: 161}
+    - {x: 74, y: 172}
+    - {x: 64, y: 187}
+    - {x: 56, y: 192}
+    - {x: 35, y: 202}
+    - {x: -35, y: 202}
+    - {x: -46, y: 199}
+    - {x: -62, y: 189}
+    - {x: -67, y: 181}
+    - {x: -78, y: 161}
+    - {x: -83, y: 119}
+    - {x: -84, y: 110}
+    - {x: -87, y: 90}
+    - {x: -87, y: 78}
+    - {x: -75, y: 78}
+    - {x: -73, y: 59}
+    - {x: -69, y: 43}
+    - {x: -59, y: 39}
+    - {x: -57, y: 32}
+    - {x: -76, y: 33}
+    - {x: -82, y: 28}
+    - {x: -84, y: 19}
+    - {x: -61, y: 13}
+    - {x: 55, y: 13}
+    - {x: 57, y: 15}
+    - {x: 81, y: 17}
+    - {x: 85, y: 26}

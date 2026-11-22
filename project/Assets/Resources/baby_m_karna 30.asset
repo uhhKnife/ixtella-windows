@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!213 &21300000
+Sprite:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: baby_m_karna 30
+  m_Rect:
+    serializedVersion: 2
+    x: 53.076122
+    y: 141.07613
+    width: 238.84776
+    height: 188.84775
+  m_Offset: {x: -12.5000105, y: -107.5}
+  m_Border: {x: 0, y: 0, z: 0, w: 0}
+  m_PixelsToUnits: 1
+  m_Pivot: {x: 0.44766536, y: -0.06924163}
+  m_Extrude: 1
+  m_IsPolygon: 0
+  m_AtlasName:
+  m_PackingTag:
+  m_RenderDataKey:
+    636f8a5aa94217e4facefe173559472b: 21300060
+  m_AtlasTags: []
+  m_SpriteAtlas: {fileID: 0}
+  m_RD:
+    serializedVersion: 2
+    texture: {fileID: 2800000, guid: b1473b0742d36084c9d923abeb800dc9, type: 3}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes:
+    - serializedVersion: 2
+      firstByte: 0
+      indexCount: 30
+      topology: 0
+      firstVertex: 0
+      vertexCount: 12
+      localAABB:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+    m_IndexBuffer: 0b000a000900080009000a00060009000800070006000800040006000700030006000400010006000300050003000400000001000300020001000000
+    m_VertexData:
+      m_CurrentChannels: 9
+      m_VertexCount: 12
+      m_Channels:
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 3
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 12
+        format: 0
+        dimension: 2
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      - stream: 0
+        offset: 0
+        format: 0
+        dimension: 0
+      m_DataSize: 240
+      _typelessdata: 0000044300008e420000000000000000000000000000f44200005041000000000000000000000000000004430000b8410000000000000000000000000000b84200009c420000000000000000000000000000824200004a430000000000000000000000000000a6420000234300000000000000000000000000001cc20000504100000000000000000000000000005cc200004a430000000000000000000000000000a0c2000021430000000000000000000000000000bec20000c0410000000000000000000000000000d6c200009c420000000000000000000000000000d6c200001442000000000000000000000000
+    textureRect:
+      serializedVersion: 2
+      x: 53.076122
+      y: 141.07613
+      width: 238.84776
+      height: 188.84775
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: -1, y: -1}
+    settingsRaw: 64
+    uvTransform: {x: 1, y: 160, z: 1, w: 128}
+    downscaleMultiplier: 1
+  m_AtlasRD:
+    serializedVersion: 2
+    texture: {fileID: 0}
+    alphaTexture: {fileID: 0}
+    m_SubMeshes: []
+    m_IndexBuffer:
+    m_VertexData:
+      m_CurrentChannels: 0
+      m_VertexCount: 0
+      m_Channels: []
+      m_DataSize: 0
+      _typelessdata:
+    textureRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    textureRectOffset: {x: 0, y: 0}
+    atlasRectOffset: {x: 0, y: 0}
+    settingsRaw: 0
+    uvTransform: {x: 0, y: 0, z: 0, w: 0}
+    downscaleMultiplier: 0
+  m_PhysicsShape:
+  - - {x: 41, y: 17}
+    - {x: 43, y: 22}
+    - {x: 65, y: 18}
+    - {x: 80, y: 13}
+    - {x: 106, y: 13}
+    - {x: 108, y: 17}
+    - {x: 121, y: 17}
+    - {x: 129, y: 24}
+    - {x: 132, y: 35}
+    - {x: 132, y: 65}
+    - {x: 131, y: 69}
+    - {x: 104, y: 68}
+    - {x: 102, y: 63}
+    - {x: 77, y: 62}
+    - {x: 78, y: 66}
+    - {x: 75, y: 78}
+    - {x: 85, y: 78}
+    - {x: 87, y: 80}
+    - {x: 88, y: 91}
+    - {x: 83, y: 93}
+    - {x: 83, y: 126}
+    - {x: 78, y: 128}
+    - {x: 78, y: 161}
+    - {x: 74, y: 172}
+    - {x: 64, y: 187}
+    - {x: 56, y: 192}
+    - {x: 35, y: 202}
+    - {x: -35, y: 202}
+    - {x: -46, y: 199}
+    - {x: -62, y: 189}
+    - {x: -67, y: 181}
+    - {x: -78, y: 161}
+    - {x: -83, y: 119}
+    - {x: -82, y: 110}
+    - {x: -92, y: 86}
+    - {x: -107, y: 73}
+    - {x: -107, y: 46}
+    - {x: -104, y: 39}
+    - {x: -93, y: 27}
+    - {x: -54, y: 27}
+    - {x: -47, y: 25}
+    - {x: -38, y: 13}
+    - {x: -9, y: 13}
+    - {x: -7, y: 18}
+    - {x: 10, y: 13}
+    - {x: 35, y: 13}
+  - - {x: 72, y: 57}
+    - {x: 72, y: 58}
+    - {x: 63, y: 58}
+    - {x: 63, y: 57}
