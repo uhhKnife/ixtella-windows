@@ -111,3 +111,4 @@ SYS_MENU_8_main_20_f,This is an emergency.<br>My captive is <color=#ff0000ff>suf
 SYS_MENU_9_title_00,Congratulations!
 SYS_MENU_9_main_00,You kept answering Master's every need, which makes you <color=#ff0000ff>a full-fledged babysitter</color>.<br><br>Your term of employment ends here, but please play again and watch over Master as they grow.<br><br>Thank you for all your hard work.
 SYS_MENU_10_notification_message_00,Master is calling for you.
+SYS_MENU_0-1-2_debug_setting,Debug

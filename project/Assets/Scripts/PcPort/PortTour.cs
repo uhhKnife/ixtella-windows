@@ -214,6 +214,24 @@ public class PortTour : MonoBehaviour
         yield return StartCoroutine(Menu(MenuCommonData.MenuType.MENU_GAME_CLEAR, "gameclear"));
         SetField(gc, "gameState_", oldState);
         SetField(gc, "playerGender_", oldGender);
+        MessageSender.SendWithTag(Tag(Define.TagId.TAG_MENU_CONTROLLER), "CloseMenu");
+        yield return new WaitForSeconds(2f);
+
+        // Debug mode: overlay and every DBG panel tab (session only, not saved).
+        PortDebug.OverrideForSession(true);
+        yield return new WaitForSeconds(0.5f);
+        PortDebugPanel.SetOverlay(true);
+        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(Capture("debug_overlay"));
+        PortDebugPanel.SetOverlay(false);
+        foreach (PortDebugPanel.Tab t in Enum.GetValues(typeof(PortDebugPanel.Tab)))
+        {
+            PortDebugPanel.ShowTab(t);
+            yield return new WaitForSeconds(0.6f);
+            yield return StartCoroutine(Capture("debug_tab_" + t.ToString().ToLower()));
+        }
+        PortDebugPanel.Close();
+        PortDebug.OverrideForSession(false);
 
         Debug.Log("[PortTour] done");
         Application.Quit();

@@ -11,9 +11,9 @@ public class StaticObjectsManager : SingletonMonoBehaviour<StaticObjectsManager>
 			return;
 		}
 		Object.DontDestroyOnLoad(base.gameObject);
-		if (Debug.isDebugBuild)
-		{
-			SceneManager.LoadScene("DebugMenu", LoadSceneMode.Additive);
-		}
+		// [PC port] The "DebugMenu" scene isn't in the build. Create the debug objects in code instead.
+		// They always exist (EventScheduler looks for DebugMenu whenever debug is on) and are
+		// hidden unless Options > Debug is ON.
+		PortDebug.CreateObjects();
 	}
 }

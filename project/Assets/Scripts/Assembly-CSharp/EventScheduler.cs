@@ -408,7 +408,7 @@ public class EventScheduler : MonoBehaviour
 
 	private void Start()
 	{
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("SetupLog");
 			UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "App Booted.");
@@ -436,7 +436,7 @@ public class EventScheduler : MonoBehaviour
 			UpdateSing();
 			UpdatePhase();
 			UpdateGameOver();
-			if (Debug.isDebugBuild)
+			if (PortDebug.Enabled)
 			{
 				DebugInput();
 			}
@@ -520,7 +520,7 @@ public class EventScheduler : MonoBehaviour
 				isResume = true;
 				MessageSender.SendWithTag(Define.GetTagName(Define.TagId.TAG_BGM_CONTROLLER), "StopBgm");
 				MessageSender.SendWithTag(Define.GetTagName(Define.TagId.TAG_SE_CONTROLLER), "StopSE");
-				if (Debug.isDebugBuild)
+				if (PortDebug.Enabled)
 				{
 					UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "Pause On.");
 				}
@@ -535,7 +535,7 @@ public class EventScheduler : MonoBehaviour
 			isResume = false;
 			MessageSender.SendWithTag(Define.GetTagName(Define.TagId.TAG_BGM_CONTROLLER), "StartFadeInBgm");
 			MessageSender.SendWithTag(Define.GetTagName(Define.TagId.TAG_PLAYER), "ResetReactionCount");
-			if (Debug.isDebugBuild)
+			if (PortDebug.Enabled)
 			{
 				UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "Pause Off.");
 			}
@@ -554,7 +554,7 @@ public class EventScheduler : MonoBehaviour
 			isRuned = false;
 			isResume = false;
 			isSetup = false;
-			if (Debug.isDebugBuild)
+			if (PortDebug.Enabled)
 			{
 				UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "App Quited.");
 			}
@@ -567,18 +567,18 @@ public class EventScheduler : MonoBehaviour
 		{
 			return;
 		}
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "Try Push Notification.");
 		}
 		int num = FindNearCallingEvent();
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "Found Delay Time ___ : " + num);
 		}
 		if (num > 0)
 		{
-			if (Debug.isDebugBuild)
+			if (PortDebug.Enabled)
 			{
 				UnityEngine.Object.FindObjectOfType<DebugMenu>().SendMessage("AddResumeLog", "Register Notification.");
 			}
@@ -783,7 +783,7 @@ public class EventScheduler : MonoBehaviour
 
 	public void CheckDaysTime()
 	{
-		if (SingletonMonoBehaviour<GrowthDatabase>.Instance == null || (Debug.isDebugBuild && isDebugOverWriteDayState_))
+		if (SingletonMonoBehaviour<GrowthDatabase>.Instance == null || (PortDebug.Enabled && isDebugOverWriteDayState_))
 		{
 			return;
 		}
@@ -1250,7 +1250,7 @@ public class EventScheduler : MonoBehaviour
 			currentPhase_.napTime_ = phaseInfo.GetNapTime();
 			return;
 		}
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			SavePhaseFinalState();
 		}
@@ -1513,7 +1513,7 @@ public class EventScheduler : MonoBehaviour
 
 	private void DebugInput()
 	{
-		if (Debug.isDebugBuild && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.UpArrow))
+		if (PortDebug.Enabled && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			ForwardTimer(1000f);
 		}
@@ -1575,7 +1575,7 @@ public class EventScheduler : MonoBehaviour
 
 	private void DebugOverWriteDayState(DaysState ds)
 	{
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			OverWriteCurrentDaysState(ds);
 			isDebugOverWriteDayState_ = true;
@@ -1613,7 +1613,7 @@ public class EventScheduler : MonoBehaviour
 
 	private void SavePhaseFinalState()
 	{
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			PlayerStatusManager.PlayerStatus playerStatus = SaveData.GetClass("PlayerStatus", new PlayerStatusManager.PlayerStatus());
 			DateTimeObserber dateTimeObserber = UnityEngine.Object.FindObjectOfType<DateTimeObserber>();

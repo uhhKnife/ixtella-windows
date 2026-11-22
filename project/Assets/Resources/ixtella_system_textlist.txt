@@ -111,3 +111,4 @@ SYS_MENU_9_title_00,おめでとう！
 SYS_MENU_9_main_00,マスターの要望にこたえ続けたあなたは<color=#ff0000ff>一人前のベビーシッター</color>です。<br><br>今回の雇用期間はここまでですが、ぜひまたプレイして、マスターの成長をみまもってあげて下さい。<br><br>お疲れ様でした。
 SYS_MENU_10_notification_message_00,マスターが呼んでいます
 SYS_MENU_0-1-2_language_setting,言語設定
+SYS_MENU_0-1-2_debug_setting,デバッグ

@@ -118,21 +118,28 @@ public static class PortLocalize
 
     private static void AddLanguageToggle()
     {
+        AddOptionRow("BtnOption_7", typeof(LanguageSettingToggle));
+        AddOptionRow("BtnOption_8", typeof(DebugSettingToggle));
+    }
+
+    // Clone the SE toggle row (BtnOption_6) as a new last row with a different toggle script.
+    private static void AddOptionRow(string rowName, Type toggleType)
+    {
         GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(OptionPrefabPath);
-        if (prefab.transform.Find("BtnOption_7") != null)
+        if (prefab.transform.Find(rowName) != null)
         {
-            Debug.Log("[PortLocalize] language row already present");
+            Debug.Log("[PortLocalize] " + rowName + " already present");
             return;
         }
         GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
         Transform se = instance.transform.Find("BtnOption_6");
         GameObject row = UnityEngine.Object.Instantiate(se.gameObject, instance.transform, false);
-        row.name = "BtnOption_7";
+        row.name = rowName;
         row.transform.SetAsLastSibling();
         UnityEngine.Object.DestroyImmediate(row.GetComponent<SeSettingToggle>());
-        row.AddComponent<LanguageSettingToggle>();
+        row.AddComponent(toggleType);
         PrefabUtility.ReplacePrefab(instance, prefab, ReplacePrefabOptions.ConnectToPrefab);
         UnityEngine.Object.DestroyImmediate(instance);
-        Debug.Log("[PortLocalize] added language row BtnOption_7");
+        Debug.Log("[PortLocalize] added " + rowName + " (" + toggleType.Name + ")");
     }
 }

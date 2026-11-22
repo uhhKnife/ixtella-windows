@@ -14,21 +14,21 @@ public class DebugMenu : MonoBehaviour
 
 	public GameObject actionPanel_;
 
-	private bool isShow_;
+	public bool isShow_;
 
 	private DebugMenuMode mode_;
 
-	private DateTimeObserber timeObserber_;
+	public DateTimeObserber timeObserber_;
 
-	private EventScheduler eventScheduler_;
+	public EventScheduler eventScheduler_;
 
 	private bool showActionPanel_;
 
 	private bool showCostumePanel_;
 
-	private GUIStyle style = new GUIStyle();
+	public GUIStyle style = new GUIStyle();
 
-	private GUIStyle emphasis = new GUIStyle();
+	public GUIStyle emphasis = new GUIStyle();
 
 	private Vector3 touchStart = Vector3.zero;
 
@@ -49,14 +49,22 @@ public class DebugMenu : MonoBehaviour
 
 	private void Start()
 	{
+		// [PC port] Created at boot on the title screen now (not from a debug scene), where there is
+		// no EventScheduler yet. PortDebugPanel refreshes both references on every scene load.
 		timeObserber_ = UnityEngine.Object.FindObjectOfType<DateTimeObserber>();
-		eventScheduler_ = GameObject.FindGameObjectWithTag("GameController").GetComponent<EventScheduler>();
+		GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
+		eventScheduler_ = (gameController != null) ? gameController.GetComponent<EventScheduler>() : null;
 	}
 
 	private void Update()
 	{
+		// [PC port] Keyboard shortcuts only while Options > Debug is ON. The touch-swipe gestures
+		// (InputTouch) are not used: on PC they would fire on every mouse drag in the game.
+		if (!PortDebug.Enabled)
+		{
+			return;
+		}
 		InputKey();
-		InputTouch();
 	}
 
 	private void InputKey()
@@ -76,7 +84,11 @@ public class DebugMenu : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
 			showActionPanel_ = !showActionPanel_;
-			actionPanel_.SetActive(showActionPanel_);
+			if (actionPanel_ != null)
+			{
+				actionPanel_.SetActive(showActionPanel_);
+			}
+			PortDebugPanel.TogglePanel();
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
@@ -132,12 +144,12 @@ public class DebugMenu : MonoBehaviour
 		}
 	}
 
-	private void NextMode()
+	public void NextMode()
 	{
 		mode_ = ((mode_ == DebugMenuMode.MODE_RESUME_LOG) ? DebugMenuMode.MODE_MULTI : ((mode_ == DebugMenuMode.MODE_MULTI) ? DebugMenuMode.MODE_PHASE_LOG : ((mode_ != DebugMenuMode.MODE_PHASE_LOG) ? mode_ : DebugMenuMode.MODE_RESUME_LOG)));
 	}
 
-	private void BeforeMode()
+	public void BeforeMode()
 	{
 		mode_ = ((mode_ == DebugMenuMode.MODE_RESUME_LOG) ? DebugMenuMode.MODE_PHASE_LOG : ((mode_ != DebugMenuMode.MODE_MULTI) ? ((mode_ == DebugMenuMode.MODE_PHASE_LOG) ? DebugMenuMode.MODE_MULTI : mode_) : DebugMenuMode.MODE_RESUME_LOG));
 	}
@@ -158,7 +170,7 @@ public class DebugMenu : MonoBehaviour
 		}
 	}
 
-	private void ClearResumeLog()
+	public void ClearResumeLog()
 	{
 		resumeLog_.Clear();
 		SaveData.SetList("ResumeDebugLog", resumeLog_);
@@ -167,7 +179,9 @@ public class DebugMenu : MonoBehaviour
 
 	private void OnGUI()
 	{
-		if (isShow_)
+		// [PC port] Only with Options > Debug ON, and only on the main screen (the panels below
+		// read the EventScheduler, which exists only there).
+		if (isShow_ && PortDebug.Enabled && eventScheduler_ != null && timeObserber_ != null)
 		{
 			ShowFps();
 			ShowKeyHelp();

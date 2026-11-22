@@ -8,7 +8,7 @@ public class DateTimeObserber : MonoBehaviour
 
 	private float startTime_;
 
-	private float timeRate_ = 1f;
+	public float timeRate_ = 1f;
 
 	private float elapseSecond_;
 
@@ -16,7 +16,7 @@ public class DateTimeObserber : MonoBehaviour
 
 	private double diffLastTime_;
 
-	private bool isTimePause_;
+	public bool isTimePause_;
 
 	private bool isOverNight_;
 
@@ -86,7 +86,7 @@ public class DateTimeObserber : MonoBehaviour
 
 	private void Update()
 	{
-		if (Debug.isDebugBuild)
+		if (PortDebug.Enabled)
 		{
 			input();
 		}
