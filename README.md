@@ -45,6 +45,25 @@ Export fixes (restoring the original data, not changing it):
   background generated >65000 vertices). The original rect, border, pivot and offsets are copied
   back from the APK.
 
+## Languages (Japanese / English)
+Options > Language switches between 日本語 and English. Switching rebuilds the title screen.
+The choice is stored in PlayerPrefs (not the save). On first launch the game uses Japanese if
+Windows' UI language is Japanese, otherwise English.
+- `Resources/ixtella_system_textlist_en.txt`: English for all 113 text ids, loaded on top of the
+  Japanese table (`TextDatabaseSystem`). It splits on the first comma only, so English can use commas.
+- `Editor/static_text_en.json`: English for 30 strings typed into scenes and prefabs.
+  `PortLocalize.Run` attaches `LocalizedStaticText` to them and adds the language row
+  (BtnOption_7) to the options menu.
+- Not translated, by choice: credits, terms of use and privacy policy, and logos and banners (images).
+- Terminology: Master (マスター, as in the official English Fate releases), Tummy (おなか),
+  Happiness (しあわせ), Strength / Intelligence / Magic (たいりょく / ちりょく / まりょく);
+  Nero's 奏者 = "Praetor", Gilgamesh's 雑種 = "mongrel" (established English renderings).
+
+Layout check: `IkustellaLink.exe -porttour -porttour-lang en|ja -porttour-out <dir>` opens every
+menu, help page, dialog, choice dialog and game-over/clear screen and saves screenshots.
+Back up `FixlSavedata.json` first: it changes game state in memory and the game may autosave.
+`tools/contact_sheet.ps1 -Dir <dir>` tiles them for review.
+
 ## Known differences / notes
 - Textures are stored uncompressed (164 MB build, against a 30 MB APK). 38 textures were ETC2 on the phone,
   so they keep the phone's compression artifacts. There is no higher-quality source.

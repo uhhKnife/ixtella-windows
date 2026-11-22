@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   japanese_: "\u5229\u7528\u898F\u7D04\u30FB\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u30DD\u30EA\u30B7\u30FC"
-  english_: Terms of Use & Privacy Policy
+  english_: Terms & Privacy
 --- !u!114 &114703437598541787
 MonoBehaviour:
   m_ObjectHideFlags: 0

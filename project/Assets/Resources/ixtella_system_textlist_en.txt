@@ -41,7 +41,7 @@ SYS_MENU_0-1-2_game_reset_button,Reset Progress
 SYS_MENU_0-1-2_dialog_00,Reset your current<br>raising progress?<br>※Registered costumes will not be lost.
 SYS_MENU_0-1-2_dialog_01,Your raising progress<br>has been reset.
 SYS_MENU_0-1-2_bgm_setting,Music
-SYS_MENU_0-1-2_se_setting,Sound Effects
+SYS_MENU_0-1-2_se_setting,SFX
 SYS_MENU_0-1-2_setting_on,ON
 SYS_MENU_0-1-2_setting_off,OFF
 SYS_MENU_0-1-2_language_setting,Language
@@ -62,7 +62,7 @@ SYS_MENU_0-4-5_main_00,As you raise Master's <color=#0000ffff>Strength</color>, 
 SYS_MENU_0-4-6_title_00,Reset Progress
 SYS_MENU_0-4-6_main_00,This feature resets your current raising progress.<br><br>Even after a reset, any costume that has been registered in the <color=#ff0000ff>Closet</color> stays registered and is not lost.
 SYS_MENU_0-4-7_title_00,Game Over and Game Clear
-SYS_MENU_0-4-7_main_00,If the player keeps neglecting Master instead of taking care of them, it will be <color=#ff0000ff>Game Over</color>.<br>A <color=#ff0000ff>Game Over</color> happens when:<br>・<color=#0000ffff>Tummy</color> is left empty for a certain time<br>・<color=#0000ffff>Happiness</color> is left empty for a certain time<br>・Master is left with a <color=#ff0000ff>cold</color> for a certain time
+SYS_MENU_0-4-7_main_00,If the player keeps neglecting Master, it will be <color=#ff0000ff>Game Over</color>.<br>A <color=#ff0000ff>Game Over</color> happens if Master is left alone for a certain time with:<br>・an empty <color=#0000ffff>Tummy</color><br>・empty <color=#0000ffff>Happiness</color><br>・a <color=#ff0000ff>cold</color>
 SYS_MENU_0-4-7_main_01,Keep raising Master for a set period of time to reach <color=#ff0000ff>Game Clear</color>.
 SYS_MENU_0-4-11_title_00,Meal
 SYS_MENU_0-4-11_main_00,A command for feeding Master.<br><br>Giving <color=#ff0000ff>Milk</color> restores Master's <color=#0000ffff>Tummy</color>. Giving a <color=#ff0000ff>Snack</color> restores Master's <color=#0000ffff>Happiness</color> and also raises <color=#0000ffff>Magic</color>.
@@ -74,14 +74,14 @@ SYS_MENU_0-4-13_title_00,Diaper
 SYS_MENU_0-4-13_main_00,A command for changing Master's diaper.<br>Master will regularly call out to the player to have their diaper changed.<br>If you leave it, Master will catch a <color=#ff0000ff>cold</color>.<br>
 SYS_MENU_0-4-14_title_00,Put to Bed
 SYS_MENU_0-4-14_main_00,A command for putting Master to sleep.<br><br>When Master wakes up, you may get a <color=#ff0000ff>reward costume</color>, so let Master sleep as much as you can.
-SYS_MENU_0-4-14_main_01,Master calls out to the player when they get sleepy.<br>For a nap, once Master is no longer sleepy, the <color=#ff0000ff>Call from Master</color> stops and the player misses the chance to put them down for a nap.<br>At night, Master will fall asleep eventually even if the player doesn't put them to bed.
+SYS_MENU_0-4-14_main_01,Master calls out to the player when they get sleepy.<br>For a nap, once Master is no longer sleepy, the <color=#ff0000ff>Call from Master</color> stops and the chance for a nap is missed.<br>At night, Master falls asleep eventually, even if not put to bed.
 SYS_MENU_0-4-15_title_00,Treatment
 SYS_MENU_0-4-15_main_00,A command that brings Master back to good health after catching a <color=#ff0000ff>cold</color>.
 SYS_MENU_0-4-16_title_00,Parameters
 SYS_MENU_0-4-16_main_00,A command for checking Master's parameters.<br><br>Besides weight and time elapsed, you can check the values of <color=#0000ffff>Strength</color>, <color=#0000ffff>Intelligence</color> and <color=#0000ffff>Magic</color>.
 SYS_MENU_0-4-17_title_00,Closet
 SYS_MENU_0-4-17_main_00,A command for viewing the costumes Master has obtained.<br><br>You can also change Master's outfit.
-SYS_MENU_0-5_title_00,Terms of Use & Privacy Policy
+SYS_MENU_0-5_title_00,Terms & Privacy
 SYS_MENU_0-5_check_message,I have read the contents and agree to them.
 SYS_MENU_0-5_button_agree,Yes
 SYS_MENU_0-5_button_disagree,No
