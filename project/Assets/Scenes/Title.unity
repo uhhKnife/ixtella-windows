@@ -3238,6 +3238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b51d0189949257d41697fd0eb3ab55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeRate_: 1
+  isTimePause_: 0
 --- !u!114 &181
 MonoBehaviour:
   m_ObjectHideFlags: 0

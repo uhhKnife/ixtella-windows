@@ -61,8 +61,21 @@ Windows' UI language is Japanese, otherwise English.
 
 Layout check: `IkustellaLink.exe -porttour -porttour-lang en|ja -porttour-out <dir>` opens every
 menu, help page, dialog, choice dialog and game-over/clear screen and saves screenshots.
-Back up `FixlSavedata.json` first: it changes game state in memory and the game may autosave.
-`tools/contact_sheet.ps1 -Dir <dir>` tiles them for review.
+Use `tools/run_tour.ps1 -Lang en|ja`: it snapshots the save (or its absence) and restores it exactly
+afterwards (the tour changes game state in memory and the game may autosave), then makes contact sheets.
+
+## Debug mode (Options > Debug)
+OFF by default and stored in PlayerPrefs like the language. With it ON:
+- the game's own debug code runs (it was behind `Debug.isDebugBuild`, now behind `PortDebug.Enabled`):
+  the DebugMenu overlay, keyboard shortcuts, resume and phase logs, and a parameter log on reset.
+  Shortcuts: F1 overlay, F2 panel, Left/Right overlay mode, PageUp/PageDown speed, Home x100, End x1,
+  Pause, Ctrl+Up skip 1000 s, hold F5/F6/F9... + Up/Down stats, Esc+Delete reset, ` log console.
+- the DBG button (right edge) opens the panel. Its tabs are Info (overlay, log console, status),
+  Time (speed, pause, skip), Stats, Costume (unlock or lock all, change costume, room),
+  Day (force day or night, allow cooking), Anim (all actions, animations and icons), Misc (reset, save).
+- Turning it OFF restores normal speed and hides everything.
+The original overlay's labels are the developers' Japanese debug text (left as is).
+DebugMenu's touch-swipe gestures are disabled on PC (they'd fire on every mouse drag).
 
 ## Known differences / notes
 - Textures are stored uncompressed (164 MB build, against a 30 MB APK). 38 textures were ETC2 on the phone,
