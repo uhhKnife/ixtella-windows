@@ -15,6 +15,9 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 | Path | What |
 |---|---|
 | `project/` | Unity 6 project (AssetRipper 2.0.0 export + fixes below) |
+| `project/Assets/Scripts/Game/` | The game's own scripts |
+| `project/Assets/Scripts/SimpleAndroidNotifications/` | Notification plugin (Android-only calls) |
+| `project/Assets/Scripts/PcPort/` | PC additions: language, debug panel, sprite loading, screenshot tour |
 | `project/Assets/Editor/PortBuild.cs` | Batch build entry points (x86 / x64) |
 | `build/` | Build output (not in git) |
 | `logs/` | Unity / player logs and test screenshots (not in git) |
@@ -29,8 +32,12 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 off and sets the icon (`project/Assets/PcPort/app_icon.png`, from `res/drawable-xxxhdpi-v4`).
 
 ## Changes from the original game
-All game logic is the original code (decompiled by AssetRipper and compiled unchanged with
-Unity's C# 4 compiler), except:
+The game logic is the original code, decompiled by AssetRipper and then tidied for reading:
+decompiler-generated local names (`num2`, `flag`, `component`, ...) renamed, inverted
+`((!x) ? a : b)` conditions flipped, duplicated loaders folded into one, empty Unity callbacks and
+the plugin's unused example removed. Behaviour is unchanged: the rewritten time-away logic was
+checked against the original on 400,000 random cases, and the save format is identical (old saves
+load, new saves decrypt with the original key). Functional changes:
 1. `AppliPlayableStateChecker.GetPlayableFlagOnCache()` returns true. The unlock server is gone
    (same change as the offline APK).
 2. `NotificationManager` (Simple Android Notifications): Android plugin calls are compiled only

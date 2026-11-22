@@ -34,7 +34,7 @@ public static class PortDebug
         {
             // Leave no debug state behind: normal speed, overlay and panel closed.
             Time.timeScale = 1f;
-            DateTimeObserber dto = Object.FindObjectOfType<DateTimeObserber>();
+            DateTimeObserber dto = Object.FindAnyObjectByType<DateTimeObserber>();
             if (dto != null)
             {
                 dto.timeRate_ = 1f;

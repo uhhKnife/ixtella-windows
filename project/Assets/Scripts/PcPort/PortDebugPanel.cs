@@ -127,7 +127,7 @@ public class PortDebugPanel : MonoBehaviour
         {
             return;
         }
-        menu_.timeObserber_ = FindObjectOfType<DateTimeObserber>();
+        menu_.timeObserber_ = FindAnyObjectByType<DateTimeObserber>();
         GameObject gc = null;
         try { gc = GameObject.FindGameObjectWithTag("GameController"); } catch (Exception) { }
         menu_.eventScheduler_ = gc != null ? gc.GetComponent<EventScheduler>() : null;

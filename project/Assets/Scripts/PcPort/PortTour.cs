@@ -101,7 +101,7 @@ public class PortTour : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         yield return StartCoroutine(Capture(name));
         // Help pages are swipe pages: capture page 2 if there is one.
-        SwipeTextController pages = FindObjectOfType<SwipeTextController>();
+        SwipeTextController pages = FindAnyObjectByType<SwipeTextController>();
         if (pages != null && pages.transform.childCount > 0)
         {
             Transform content = pages.GetComponentInChildren<UnityEngine.UI.ScrollRect>() != null ? pages.GetComponentInChildren<UnityEngine.UI.ScrollRect>().content : null;
@@ -193,7 +193,7 @@ public class PortTour : MonoBehaviour
         yield return StartCoroutine(Capture("main"));
         DumpLayout();
         // Meal / Play choice dialogs, opened the same way the care buttons do.
-        foreach (OpenDialogButtonBase button in new OpenDialogButtonBase[] { FindObjectOfType<CareMealButton>(), FindObjectOfType<CarePlayButton>() })
+        foreach (OpenDialogButtonBase button in new OpenDialogButtonBase[] { FindAnyObjectByType<CareMealButton>(), FindAnyObjectByType<CarePlayButton>() })
         {
             if (button == null)
             {
@@ -202,7 +202,7 @@ public class PortTour : MonoBehaviour
             button.OpenDialog();
             yield return new WaitForSeconds(2f);
             yield return StartCoroutine(Capture("choice_" + button.GetType().Name));
-            DialogBase open = FindObjectOfType<DialogBase>();
+            DialogBase open = FindAnyObjectByType<DialogBase>();
             if (open != null)
             {
                 open.SendMessage("CloseDialog", SendMessageOptions.DontRequireReceiver);
