@@ -41,6 +41,42 @@ public class TextDatabaseSystem : SingletonMonoBehaviour<TextDatabaseSystem>
 			textDataList_.Add(array2[0], text);
 		}
 		Resources.UnloadAsset(textAsset);
+		// [PC port] English overrides on top of the Japanese table (missing ids stay Japanese).
+		if (Localization.IsEnglish)
+		{
+			LoadEnglishOverrides();
+		}
+	}
+
+	// [PC port] Same "TextId,MessageText" format, but split on the first comma only so
+	// English text can contain commas (the original loader drops every ASCII comma).
+	private void LoadEnglishOverrides()
+	{
+		string fileName = Localization.EnglishFile(TEXT_FILE_NAME);
+		TextAsset textAsset = Resources.Load(fileName) as TextAsset;
+		if (textAsset == null)
+		{
+			Debug.LogError("[" + GetType().ToString() + "] cannot load " + fileName);
+			return;
+		}
+		string[] lines = textAsset.text.Split('\n');
+		for (int i = 0; i < lines.Length; i++)
+		{
+			string line = lines[i].TrimEnd('\r');
+			int comma = line.IndexOf(',');
+			if (comma <= 0)
+			{
+				continue;
+			}
+			textDataList_[line.Substring(0, comma)] = line.Substring(comma + 1).Replace("<br>", "\n");
+		}
+		Resources.UnloadAsset(textAsset);
+	}
+
+	// [PC port] Re-read the tables after a language change.
+	public void Reload()
+	{
+		LoadTextDatabase();
 	}
 
 	public string GetText(string textId)

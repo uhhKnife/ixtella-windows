@@ -1,0 +1,113 @@
+TextId,MessageText
+SYS_game_title,Fate/Ikustella Link
+SYS_master_parameter_intelligence,Intelligence
+SYS_master_parameter_magic,Magic
+SYS_master_parameter_strength,Strength
+SYS_master_parameter_weight,Weight
+SYS_master_parameter_weight_unit,kg
+SYS_master_parameter_time,Time Elapsed
+SYS_master_parameter_satiety,Tummy
+SYS_master_parameter_feel,Happiness
+SYS_master_male,a boy
+SYS_master_female,a girl
+SYS_dialog_button_yes,Yes
+SYS_dialog_button_no,No
+SYS_dialog_button_ok,OK
+SYS_common_return,Back
+SYS_common_return_title,To Title
+SYS_common_colon,:
+SYS_common_slash,/
+SYS_servant_name_CH001,Nero
+SYS_servant_name_CH002,Tamamo
+SYS_servant_name_CH003,Altera
+SYS_servant_name_CH004,Elizabeth
+SYS_servant_name_CH006,Nameless
+SYS_servant_name_CH007,Karna
+SYS_servant_name_CH008,Gilgamesh
+SYS_servant_name_CH009,Cu Chulainn
+SYS_servant_name_CH016,Artoria
+SYS_servant_name_CH024,Charlemagne
+SYS_LOADING_loading,Now Loading
+SYS_LOADING_connecting,Connecting
+SYS_MENU_0_dialog_date_error,It isn't yet the date and time<br>when play can begin.<br>Please wait a while<br>and launch the app again.
+SYS_MENU_0_dialog_connection_error,Connection error.<br>Please launch the app somewhere<br>with a good connection.
+SYS_MENU_0_dialog_download_error,The download failed.
+SYS_MENU_0_dialog_button_retry,Retry
+SYS_MENU_0-1_touch_screen,TOUCH TO START
+SYS_MENU_0-1_dialog_00,Quit the app?
+SYS_MENU_0-1_copyright,©Usagirouto 2018 ©TYPE-MOON ©2018 Marvelous Inc.
+SYS_MENU_0-1-2_title_00,Options
+SYS_MENU_0-1-2_game_reset_button,Reset Progress
+SYS_MENU_0-1-2_dialog_00,Reset your current<br>raising progress?<br>※Registered costumes will not be lost.
+SYS_MENU_0-1-2_dialog_01,Your raising progress<br>has been reset.
+SYS_MENU_0-1-2_bgm_setting,Music
+SYS_MENU_0-1-2_se_setting,Sound Effects
+SYS_MENU_0-1-2_setting_on,ON
+SYS_MENU_0-1-2_setting_off,OFF
+SYS_MENU_0-1-2_language_setting,Language
+SYS_MENU_0-2_title_00,Choose Gender
+SYS_MENU_0-2_main_00,Please choose<br>Master's gender.
+SYS_MENU_0-2_dialog_00,Make Master<br>[gender]?
+SYS_MENU_0-3_title_00,How to Play
+SYS_MENU_0-4-1_title_00,Game Overview
+SYS_MENU_0-4-1_main_00,In this game, you look after Master, who has turned into a baby.<br><br>The player is a <color=#ff0000ff>babysitter</color> hired to care for the baby, and whenever Master wants something, they will call out to the player.<br><br>Watch over Master and raise them well.
+SYS_MENU_0-4-2_title_00,Tummy and Happiness
+SYS_MENU_0-4-2_main_00,Master has two parameters: <color=#0000ffff>Tummy</color> and <color=#0000ffff>Happiness</color>.<br><br>Both are shown as a number of hearts, and both gradually go down as time passes.
+SYS_MENU_0-4-2_main_01,<color=#0000ffff>Tummy</color> is restored with the <color=#ff0000ff>Meal</color> care command, and <color=#0000ffff>Happiness</color> with the <color=#ff0000ff>Play</color> care command.<br><br>If <color=#0000ffff>Tummy</color> or <color=#0000ffff>Happiness</color> is left empty for a certain amount of time, it will be <color=#ff0000ff>Game Over</color>.
+SYS_MENU_0-4-3_title_00,Care Commands
+SYS_MENU_0-4-4_title_00,Calls from Master
+SYS_MENU_0-4-4_main_00,When Master wants something, they will call out to the player.<br><br>Try all sorts of things to find out what Master wants.
+SYS_MENU_0-4-5_title_00,Reward Costumes
+SYS_MENU_0-4-5_main_00,As you raise Master's <color=#0000ffff>Strength</color>, <color=#0000ffff>Intelligence</color> and <color=#0000ffff>Magic</color> parameters, you can get a <color=#ff0000ff>reward costume</color> when Master wakes up.<br>The parameter values needed are different for each type of <color=#ff0000ff>reward costume</color>.<br>
+SYS_MENU_0-4-6_title_00,Reset Progress
+SYS_MENU_0-4-6_main_00,This feature resets your current raising progress.<br><br>Even after a reset, any costume that has been registered in the <color=#ff0000ff>Closet</color> stays registered and is not lost.
+SYS_MENU_0-4-7_title_00,Game Over and Game Clear
+SYS_MENU_0-4-7_main_00,If the player keeps neglecting Master instead of taking care of them, it will be <color=#ff0000ff>Game Over</color>.<br>A <color=#ff0000ff>Game Over</color> happens when:<br>・<color=#0000ffff>Tummy</color> is left empty for a certain time<br>・<color=#0000ffff>Happiness</color> is left empty for a certain time<br>・Master is left with a <color=#ff0000ff>cold</color> for a certain time
+SYS_MENU_0-4-7_main_01,Keep raising Master for a set period of time to reach <color=#ff0000ff>Game Clear</color>.
+SYS_MENU_0-4-11_title_00,Meal
+SYS_MENU_0-4-11_main_00,A command for feeding Master.<br><br>Giving <color=#ff0000ff>Milk</color> restores Master's <color=#0000ffff>Tummy</color>. Giving a <color=#ff0000ff>Snack</color> restores Master's <color=#0000ffff>Happiness</color> and also raises <color=#0000ffff>Magic</color>.
+SYS_MENU_0-4-11_main_01,Once in a while, <color=#ff0000ff>Homemade Dish</color> is added to the choices.<br>If you choose <color=#ff0000ff>Homemade Dish</color>, Master is served a dish made by Nero, Tamamo or Elizabeth.<br>Each dish has a different effect, such as raising Master's <color=#0000ffff>Strength</color> or <color=#0000ffff>Intelligence</color>.
+SYS_MENU_0-4-12_title_00,Play
+SYS_MENU_0-4-12_main_00,A command for raising Master's <color=#0000ffff>Strength</color>, <color=#0000ffff>Intelligence</color> and <color=#0000ffff>Magic</color> parameters.<br><br><color=#ff0000ff>Ball Play</color> raises <color=#0000ffff>Strength</color>, and reading a <color=#ff0000ff>Picture Book</color> raises <color=#0000ffff>Intelligence</color>.
+SYS_MENU_0-4-12_main_01,<color=#ff0000ff>Singing</color> raises <color=#0000ffff>Magic</color>.<br><color=#ff0000ff>Singing</color> can only be chosen when Master asks for it, so keep an eye out for <color=#ff0000ff>Calls from Master</color>.
+SYS_MENU_0-4-13_title_00,Diaper
+SYS_MENU_0-4-13_main_00,A command for changing Master's diaper.<br>Master will regularly call out to the player to have their diaper changed.<br>If you leave it, Master will catch a <color=#ff0000ff>cold</color>.<br>
+SYS_MENU_0-4-14_title_00,Put to Bed
+SYS_MENU_0-4-14_main_00,A command for putting Master to sleep.<br><br>When Master wakes up, you may get a <color=#ff0000ff>reward costume</color>, so let Master sleep as much as you can.
+SYS_MENU_0-4-14_main_01,Master calls out to the player when they get sleepy.<br>For a nap, once Master is no longer sleepy, the <color=#ff0000ff>Call from Master</color> stops and the player misses the chance to put them down for a nap.<br>At night, Master will fall asleep eventually even if the player doesn't put them to bed.
+SYS_MENU_0-4-15_title_00,Treatment
+SYS_MENU_0-4-15_main_00,A command that brings Master back to good health after catching a <color=#ff0000ff>cold</color>.
+SYS_MENU_0-4-16_title_00,Parameters
+SYS_MENU_0-4-16_main_00,A command for checking Master's parameters.<br><br>Besides weight and time elapsed, you can check the values of <color=#0000ffff>Strength</color>, <color=#0000ffff>Intelligence</color> and <color=#0000ffff>Magic</color>.
+SYS_MENU_0-4-17_title_00,Closet
+SYS_MENU_0-4-17_main_00,A command for viewing the costumes Master has obtained.<br><br>You can also change Master's outfit.
+SYS_MENU_0-5_title_00,Terms of Use & Privacy Policy
+SYS_MENU_0-5_check_message,I have read the contents and agree to them.
+SYS_MENU_0-5_button_agree,Yes
+SYS_MENU_0-5_button_disagree,No
+SYS_MENU_0-6_title_00,Credits
+SYS_MENU_1_button_title,To Title
+SYS_MENU_1-1_meal_00,Milk
+SYS_MENU_1-1_meal_01,Snack
+SYS_MENU_1-1_meal_02,Homemade Dish
+SYS_MENU_1-2_play_00,Ball Play
+SYS_MENU_1-2_play_01,Picture Book
+SYS_MENU_1-2_play_02,Singing
+SYS_MENU_2_title_00,Parameters
+SYS_MENU_4_title_00,Closet
+SYS_MENU_4_dialog_00,Change into the<br>[servant_name] costume?
+SYS_MENU_4_dialog_01,The gender is different,<br>so Master can't wear it.
+SYS_MENU_4_default_costume,original
+SYS_MENU_7-1_title_00,Costume Get
+SYS_MENU_7-1_main_00,You got a reward!<br>Please choose a costume.
+SYS_MENU_7-1_dialog_00,Accept the reward<br>from [servant_name]?
+SYS_MENU_8_title_00,A Note Left Behind
+SYS_MENU_8_main_00,I came by to see how Master was doing, but....<br>It seems Master was <color=#ff0000ff>hungry the whole time</color>, calling out for you.<br>I'll take Master into my care.<br>Thank you for your trouble.<br><br>Nameless
+SYS_MENU_8_main_00_f,You cannot even look after an infant....<br>The mongrel was <color=#ff0000ff>hungry the whole time</color>. You need only have given it some milk.<br>I shall take the mongrel into My keeping.<br><br>Gilgamesh
+SYS_MENU_8_main_10,Hey, hey, wait a minute!<br>My dear Master <color=#ff0000ff>isn't feeling happy at all</color>!<br>So, I'll be taking Master into my care now.<br>Thank you ever so much for your hard work.<br><br>Tamamo-no-Mae
+SYS_MENU_8_main_10_f,This will not do.<br>It seems Master <color=#ff0000ff>has not been able to feel happy</color>.<br>Please leave this to me.<br>Thank you for your service.<br><br>Jeanne d'Arc
+SYS_MENU_8_main_20,What!?<br>My Praetor is <color=#ff0000ff>suffering from a cold</color>!<br>This I cannot overlook!<br>I shall take responsibility and keep my Praetor in my care.<br>You have done your part.<br><br>Nero Claudius
+SYS_MENU_8_main_20_f,This is an emergency.<br>My captive is <color=#ff0000ff>suffering from a cold</color>.<br>Leave this to me now.<br>...I will show you perfect nursing care.<br>You have done your part.<br><br>Altera
+SYS_MENU_9_title_00,Congratulations!
+SYS_MENU_9_main_00,You kept answering Master's every need, which makes you <color=#ff0000ff>a full-fledged babysitter</color>.<br><br>Your term of employment ends here, but please play again and watch over Master as they grow.<br><br>Thank you for all your hard work.
+SYS_MENU_10_notification_message_00,Master is calling for you.
