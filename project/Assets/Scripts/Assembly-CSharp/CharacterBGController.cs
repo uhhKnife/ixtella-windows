@@ -29,7 +29,7 @@ public class CharacterBGController : MonoBehaviour
 	private void ChangeBackground(PlayerStatusManager.Gender gender)
 	{
 		string path = ((gender != PlayerStatusManager.Gender.GENDER_MALE) ? FEMALE_BG_NAME : MALE_BG_NAME);
-		Sprite sprite = Resources.Load<Sprite>(path);
+		Sprite sprite = PortSprites.Load(path);
 		spriteRenderer_.sprite = sprite;
 		if (SingletonMonoBehaviour<PlayerStatusManager>.Instance != null)
 		{

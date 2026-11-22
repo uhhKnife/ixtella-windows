@@ -1,9 +1,12 @@
 # フェイト／育ステラ りんく: native Windows port
 
-A Windows x86 (32-bit) build of the Android game, rebuilt from the original APK data
-with Unity 2017.2.3f1 (the game's own engine version), Mono backend, .NET 3.5 profile.
+A Windows build of the Android game, rebuilt from the original APK data.
 
-**Run:** `build/win-x86/IkustellaLink.exe` (copy the whole `win-x86` folder to move it).
+This is the `unity6` branch: the project upgraded to **Unity 6000.6.10f1** (Mono), with no
+"Made with Unity" splash (allowed on Personal since Unity 6) and the APK's app icon. The `master`
+branch keeps the Unity 2017.2.3f1 version.
+
+**Run:** `build/win-x64/IkustellaLink.exe` (or `win-x86` for 32-bit; copy the whole folder to move it).
 Mouse = touch, drag = swipe, Esc on the title screen = Android back (quit dialog).
 Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.json`
 (same AES-encrypted format as the phone).
@@ -11,7 +14,7 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 ## Layout
 | Path | What |
 |---|---|
-| `project/` | Unity 2017.2.3f1 project (AssetRipper 2.0.0 export + fixes below) |
+| `project/` | Unity 6 project (AssetRipper 2.0.0 export + fixes below) |
 | `project/Assets/Editor/PortBuild.cs` | Batch build entry points (x86 / x64) |
 | `tools/fix_sprites.py` | Restores sprite geometry from the APK (see below) |
 | `tools/wincap.ps1` | Test helper: captures the game window to PNG |
@@ -21,10 +24,13 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 
 ## Build
 ```
-"C:\Program Files\Unity\Hub\Editor\2017.2.3f1\Editor\Unity.exe" -batchmode -quit ^
-  -projectPath project -executeMethod PortBuild.BuildWin32 -logFile logs\build-x86.log
+"D:\Unity\Unity\6000.6.10f1\Editor\Unity.exe" -batchmode -quit ^
+  -projectPath project -executeMethod PortBuild.BuildWin64 -logFile logs\build-x64.log
 ```
-(`PortBuild.BuildWin64` for x64.) Output: `build/win-x86/`.
+(`PortBuild.BuildWin32` for x86.) Output: `build/win-x64/`. The build script turns the splash
+off and sets the icon (`project/Assets/PcPort/app_icon.png`, from `res/drawable-xxxhdpi-v4`).
+
+Tour check: `tools/run_tour.ps1 -Lang en|ja [-Arch win-x64|win-x86]`.
 
 ## Changes from the original game
 All game logic is the original code (decompiled by AssetRipper and compiled unchanged with
@@ -44,6 +50,14 @@ Export fixes (restoring the original data, not changing it):
   sprite rect, with borders and pivot shifted. That broke 9-sliced and tiled images (a tiled button
   background generated >65000 vertices). The original rect, border, pivot and offsets are copied
   back from the APK.
+- `PortSprites.Load`: the room backgrounds and baby sprites live in separate `<texture> 0`
+  sprite assets after export. Loading them by texture name found nothing in Unity 2017 (no room
+  background on the main screen) and a wrong full-texture sprite in Unity 6. They now load the
+  original sprite, so the room fills the panel as on the phone.
+
+Unity 6 upgrade: `BuildPlayer` report API in `PortBuild.cs`, `SaveAsPrefabAsset` in
+`PortLocalize.cs`; unused packages the upgrader added (Purchasing, Analytics, Timeline, ...) removed
+and Unity Connect left off, so the build stays offline.
 
 ## Languages (Japanese / English)
 Options > Language switches between 日本語 and English. Switching rebuilds the title screen.

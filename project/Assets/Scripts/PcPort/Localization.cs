@@ -1,7 +1,4 @@
-// [PC port] Language selection (Japanese / English).
-//
-// Stored in PlayerPrefs (not SaveData) so "reset raising progress" doesn't reset it.
-// Default on first launch: Japanese if Windows' UI language is Japanese, otherwise English.
+// Kept in PlayerPrefs so a progress reset doesn't change it. Defaults to the Windows UI language.
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;

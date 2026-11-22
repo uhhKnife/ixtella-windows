@@ -1,8 +1,4 @@
-// [PC port] English for a Text whose Japanese is typed into a scene or prefab
-// (not loaded from ixtella_system_textlist). Added by Assets/Editor/PortLocalize.cs.
-//
-// It only swaps the text while it still holds the original string, so a value that the
-// game's own scripts set at runtime (from the text database) is never overwritten.
+// Only swaps the text while it's still the original string, so runtime-set text is left alone.
 using UnityEngine;
 using UnityEngine.UI;
 

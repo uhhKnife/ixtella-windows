@@ -1,8 +1,4 @@
-// [PC port] Language row in the options menu (BtnOption_7 in Resources/AreaButtonVertical,
-// cloned from the SE toggle by Assets/Editor/PortLocalize.cs).
-//
-// Reuses the BGM/SE toggle look and animation: "on" = English, "off" = 日本語.
-// Changing it rebuilds the title screen so all text is set again.
+// Toggle "on" = English, "off" = 日本語.
 using UnityEngine;
 using UnityEngine.UI;
 

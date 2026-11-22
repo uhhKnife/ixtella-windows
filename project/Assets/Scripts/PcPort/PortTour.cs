@@ -1,11 +1,4 @@
-// [PC port] Automated screenshot tour for checking layouts (both languages).
-// Does nothing unless the game is started with -porttour:
-//
-//   IkustellaLink.exe -porttour -porttour-lang en -porttour-out C:\shots -screen-width 540 -screen-height 960
-//
-// It opens every menu and dialog through the game's own controllers, saves a PNG of each,
-// and quits. The language is used for this run only (not saved). It touches game state
-// in memory (game-over screens) and the game may autosave, so back up FixlSavedata.json first.
+// Screenshot tour, only runs with -porttour. Use tools/run_tour.ps1 (it backs up the save).
 using System;
 using System.Collections;
 using System.IO;
@@ -57,6 +50,34 @@ public class PortTour : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Run());
+    }
+
+    private static void DumpLayout()
+    {
+        Camera cam = Camera.main;
+        Debug.Log("[PortTour] screen=" + Screen.width + "x" + Screen.height + " cam=" + (cam == null ? "null" : cam.name + " pos=" + cam.transform.position + " ortho=" + cam.orthographic + " size=" + cam.orthographicSize));
+        foreach (string n in new string[] { "PlayerBGCanvas", "CharacterBackground", "Player" })
+        {
+            GameObject go = GameObject.Find(n);
+            if (go == null)
+            {
+                Debug.Log("[PortTour] " + n + " not found");
+                continue;
+            }
+            Transform t = go.transform;
+            string s = "[PortTour] " + n + " active=" + go.activeInHierarchy + " pos=" + t.position + " local=" + t.localPosition + " lossy=" + t.lossyScale;
+            Canvas c = go.GetComponent<Canvas>();
+            if (c != null) s += " canvas mode=" + c.renderMode + " cam=" + (c.worldCamera == null ? "null" : c.worldCamera.name) + " plane=" + c.planeDistance + " scale=" + c.scaleFactor + " layer=" + c.sortingLayerName + "/" + c.sortingOrder;
+            RectTransform rt = t as RectTransform;
+            if (rt != null) s += " rect=" + rt.rect + " anchorMin=" + rt.anchorMin + " anchorMax=" + rt.anchorMax + " pivot=" + rt.pivot + " anchored=" + rt.anchoredPosition;
+            SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
+            if (sr != null && cam != null)
+            {
+                Vector3 lo = cam.WorldToScreenPoint(sr.bounds.min), hi = cam.WorldToScreenPoint(sr.bounds.max);
+                s += " sprite=" + (sr.sprite == null ? "null" : sr.sprite.name) + " color=" + sr.color + " bounds=" + sr.bounds + " screenMin=" + lo + " screenMax=" + hi + " layer=" + sr.sortingLayerName + "/" + sr.sortingOrder;
+            }
+            Debug.Log(s);
+        }
     }
 
     private IEnumerator Capture(string name)
@@ -170,6 +191,7 @@ public class PortTour : MonoBehaviour
         MessageSender.SendWithTag(Tag(Define.TagId.TAG_SCENE_CONTROLLER), "ChangeScene", Define.SceneId.SCENE_MAIN);
         yield return new WaitForSeconds(9f);
         yield return StartCoroutine(Capture("main"));
+        DumpLayout();
         // Meal / Play choice dialogs, opened the same way the care buttons do.
         foreach (OpenDialogButtonBase button in new OpenDialogButtonBase[] { FindObjectOfType<CareMealButton>(), FindObjectOfType<CarePlayButton>() })
         {

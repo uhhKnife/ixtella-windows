@@ -1,9 +1,4 @@
-// [PC port] Debug mode switch (Options > Debug), equivalent to Unity's Debug.isDebugBuild in the
-// original game code, which the release build had turned off.
-//
-// Stored in PlayerPrefs like the language. Default OFF. With it ON the game's own debug code runs
-// (DebugMenu overlay + keyboard shortcuts, resume/phase logs, parameter log on reset) and the
-// DBG panel (PortDebugPanel) appears.
+// Options > Debug. Replaces Debug.isDebugBuild in the game code. Off by default.
 using UnityEngine;
 
 public static class PortDebug

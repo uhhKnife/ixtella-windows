@@ -1,7 +1,3 @@
-// [PC port] On-screen debug panel (the "DBG" button), shown only while Options > Debug is ON.
-// Same features as the Android debug mod: it drives the game's own leftover debug code
-// (DebugMenu overlay, DebugPlayerActionSender, DebugConsole, EventScheduler.ForwardTimer, ...).
-// F2 also opens/closes it.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,7 +45,6 @@ public class PortDebugPanel : MonoBehaviour
     private RectTransform buttonBlocker_;
     private GameObject panelBlocker_;
 
-    // ------------------------------------------------------------------ static API
 
     public static void TogglePanel()
     {
@@ -88,7 +83,6 @@ public class PortDebugPanel : MonoBehaviour
         }
     }
 
-    // ------------------------------------------------------------------ lifecycle
 
     private void Awake()
     {
@@ -185,7 +179,6 @@ public class PortDebugPanel : MonoBehaviour
         UpdateDragScroll();
     }
 
-    // ------------------------------------------------------------------ GUI
 
     private void EnsureStyles()
     {
@@ -339,7 +332,6 @@ public class PortDebugPanel : MonoBehaviour
         Debug.Log("[PortDebug] " + msg);
     }
 
-    // ------------------------------------------------------------------ tabs
 
     private void TabInfo()
     {
@@ -572,7 +564,6 @@ public class PortDebugPanel : MonoBehaviour
         Text("F1 overlay | F2 this panel | Left/Right overlay mode | PageUp/PageDown speed +-5 | Home x100 | End x1 | Pause | Ctrl+Up skip 1000 s | hold F5 (satiety) / F6 (mood) / F9 (strength)... + Up/Down | Esc+Delete reset | ` console");
     }
 
-    // ------------------------------------------------------------------ helpers
 
     private void Grid(string[] items, int cols, Action<string> onClick)
     {

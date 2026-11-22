@@ -4,8 +4,7 @@ using UnityEngine;
 
 namespace Assets.SimpleAndroidNotifications
 {
-	// [PC port] Android plugin calls are compiled only for Android; elsewhere these only
-	// track ids (NotificationIdHandler), so the game logic is unchanged.
+	// Plugin calls are Android-only; elsewhere this just tracks ids.
 	public static class NotificationManager
 	{
 		public const string FullClassName = "com.hippogames.simpleandroidnotifications.Controller";
@@ -87,7 +86,6 @@ namespace Assets.SimpleAndroidNotifications
 		public static NotificationCallback GetNotificationCallback()
 		{
 #if !UNITY_ANDROID || UNITY_EDITOR
-			// [PC port] No Android intents on Windows.
 			return null;
 #else
 			AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");

@@ -33,3 +33,9 @@
 ## Plan (Phase 4+)
 AssetRipper -> Unity 2017.2.3f1 project (port/project) -> stub notifications, Esc = back, windowed portrait
 -> build Windows x86 (port/build/win-x86) -> test.
+
+## Unity 6 upgrade (branch unity6, 2026-11-22)
+- Worktree port-unity6, Unity 6000.6.10f1. Upgrade compiled except PortBuild (BuildReport API); fixed.
+- Splash off, APK icon set, unused service packages removed, Unity Connect off.
+- Found via user report: room background (bg_01/bg_02) was never drawn in the 2017 build and drawn ~250 px low in Unity 6. Cause: Resources.Load<Sprite>(texture) vs exported "<texture> 0" sprites. Fixed with PortSprites.Load.
+- Verified: x64 + x86 builds, tours en/ja/x86 (57 shots each, only the known GET_COSTUME tour NRE), no splash in launch captures, exe icon extracted and checked.

@@ -1,9 +1,5 @@
-// [PC port] Editor batch step for the English localization.
-//   Unity.exe -batchmode -quit -projectPath <project> -executeMethod PortLocalize.Run -logFile <log>
-//
-// 1. Adds the language row (BtnOption_7) to Resources/AreaButtonVertical, cloned from the SE row.
-// 2. Adds LocalizedStaticText to every UI Text whose typed-in Japanese is in static_text_en.json
-//    (prefabs + build scenes). Re-running is safe: existing components are updated.
+// Adds the Language/Debug option rows and tags hardcoded Japanese UI text for translation.
+// Unity.exe -batchmode -quit -projectPath <project> -executeMethod PortLocalize.Run -logFile <log>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -138,7 +134,7 @@ public static class PortLocalize
         row.transform.SetAsLastSibling();
         UnityEngine.Object.DestroyImmediate(row.GetComponent<SeSettingToggle>());
         row.AddComponent(toggleType);
-        PrefabUtility.ReplacePrefab(instance, prefab, ReplacePrefabOptions.ConnectToPrefab);
+        PrefabUtility.SaveAsPrefabAsset(instance, OptionPrefabPath);
         UnityEngine.Object.DestroyImmediate(instance);
         Debug.Log("[PortLocalize] added " + rowName + " (" + toggleType.Name + ")");
     }

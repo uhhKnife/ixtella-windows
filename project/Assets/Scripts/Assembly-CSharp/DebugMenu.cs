@@ -49,8 +49,7 @@ public class DebugMenu : MonoBehaviour
 
 	private void Start()
 	{
-		// [PC port] Created at boot on the title screen now (not from a debug scene), where there is
-		// no EventScheduler yet. PortDebugPanel refreshes both references on every scene load.
+		// May be null on the title screen; PortDebugPanel refreshes these on scene load.
 		timeObserber_ = UnityEngine.Object.FindObjectOfType<DateTimeObserber>();
 		GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
 		eventScheduler_ = (gameController != null) ? gameController.GetComponent<EventScheduler>() : null;
@@ -58,8 +57,7 @@ public class DebugMenu : MonoBehaviour
 
 	private void Update()
 	{
-		// [PC port] Keyboard shortcuts only while Options > Debug is ON. The touch-swipe gestures
-		// (InputTouch) are not used: on PC they would fire on every mouse drag in the game.
+		// No swipe gestures: on PC they'd fire on every mouse drag.
 		if (!PortDebug.Enabled)
 		{
 			return;
@@ -179,8 +177,7 @@ public class DebugMenu : MonoBehaviour
 
 	private void OnGUI()
 	{
-		// [PC port] Only with Options > Debug ON, and only on the main screen (the panels below
-		// read the EventScheduler, which exists only there).
+		// EventScheduler only exists on the main screen.
 		if (isShow_ && PortDebug.Enabled && eventScheduler_ != null && timeObserber_ != null)
 		{
 			ShowFps();

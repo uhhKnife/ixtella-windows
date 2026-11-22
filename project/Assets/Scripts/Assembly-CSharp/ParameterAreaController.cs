@@ -127,7 +127,7 @@ public class ParameterAreaController : MonoBehaviour
 	{
 		GameObject gameObject = base.transform.Find(CHARA_TEXTURE_OBJECT_NAME).gameObject;
 		Image component = gameObject.GetComponent<Image>();
-		component.sprite = Resources.Load<Sprite>(MenuCommonData.GetCharaSpriteFilename(charaId));
+		component.sprite = PortSprites.Load(MenuCommonData.GetCharaSpriteFilename(charaId));
 	}
 
 	private void SetParameterLabelText(ParameterType type)

@@ -160,7 +160,7 @@ public abstract class MessageDialogBase : DialogBase
 	protected void SetDisplaytCharaId(Define.CharaId charaId)
 	{
 		Image componentInChildren = charaImageObject_.GetComponentInChildren<Image>();
-		componentInChildren.sprite = Resources.Load<Sprite>(MenuCommonData.GetCharaSpriteFilename(charaId));
+		componentInChildren.sprite = PortSprites.Load(MenuCommonData.GetCharaSpriteFilename(charaId));
 	}
 
 	protected virtual bool IsCharaImageActive()
