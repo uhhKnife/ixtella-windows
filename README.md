@@ -16,8 +16,6 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 |---|---|
 | `project/` | Unity 6 project (AssetRipper 2.0.0 export + fixes below) |
 | `project/Assets/Editor/PortBuild.cs` | Batch build entry points (x86 / x64) |
-| `tools/fix_sprites.py` | Restores sprite geometry from the APK (see below) |
-| `tools/wincap.ps1` | Test helper: captures the game window to PNG |
 | `build/` | Build output (not in git) |
 | `logs/` | Unity / player logs and test screenshots (not in git) |
 | `PROGRESS.md` | Progress log |
@@ -29,8 +27,6 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 ```
 (`PortBuild.BuildWin32` for x86.) Output: `build/win-x64/`. The build script turns the splash
 off and sets the icon (`project/Assets/PcPort/app_icon.png`, from `res/drawable-xxxhdpi-v4`).
-
-Tour check: `tools/run_tour.ps1 -Lang en|ja [-Arch win-x64|win-x86]`.
 
 ## Changes from the original game
 All game logic is the original code (decompiled by AssetRipper and compiled unchanged with
@@ -46,7 +42,7 @@ Export fixes (restoring the original data, not changing it):
 - Scenes moved from `Assets/Scenes/Assets/Scenes/*.unity.unity` to `Assets/Scenes/`; build scene list GUIDs fixed.
 - Removed two .NET Core DLLs that AssetRipper added (unused, and incompatible with Unity 2017).
 - `Disabled.anim`: 4 animation paths AssetRipper couldn't name were recovered by matching their CRC32 hashes.
-- `tools/fix_sprites.py`: AssetRipper exported 574 trimmed sprites with their trimmed rect as the
+- Sprite geometry: AssetRipper exported 574 trimmed sprites with their trimmed rect as the
   sprite rect, with borders and pivot shifted. That broke 9-sliced and tiled images (a tiled button
   background generated >65000 vertices). The original rect, border, pivot and offsets are copied
   back from the APK.
@@ -75,8 +71,7 @@ Windows' UI language is Japanese, otherwise English.
 
 Layout check: `IkustellaLink.exe -porttour -porttour-lang en|ja -porttour-out <dir>` opens every
 menu, help page, dialog, choice dialog and game-over/clear screen and saves screenshots.
-Use `tools/run_tour.ps1 -Lang en|ja`: it snapshots the save (or its absence) and restores it exactly
-afterwards (the tour changes game state in memory and the game may autosave), then makes contact sheets.
+Back up `FixlSavedata.json` first: the tour changes game state in memory and the game may autosave.
 
 ## Debug mode (Options > Debug)
 OFF by default and stored in PlayerPrefs like the language. With it ON:

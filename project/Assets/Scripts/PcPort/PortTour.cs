@@ -1,4 +1,4 @@
-// Screenshot tour, only runs with -porttour. Use tools/run_tour.ps1 (it backs up the save).
+// Screenshot tour, only runs with -porttour. Back up the save first; the game may autosave.
 using System;
 using System.Collections;
 using System.IO;
