@@ -219,10 +219,11 @@ public class PortDebugPanel : MonoBehaviour
         box_.normal.background = bgPanel_;
     }
 
+    // Right edge, just above the panel, so the panel never covers it.
     private Rect ToggleRect()
     {
-        float w = 110 * scale_, h = 56 * scale_;
-        return new Rect(Screen.width - w - 8 * scale_, Screen.height * 0.5f - h * 0.5f, w, h);
+        float w = 110 * scale_, h = 56 * scale_, m = 8 * scale_;
+        return new Rect(Screen.width - w - m, PanelRect().y - h - m, w, h);
     }
 
     private Rect PanelRect()
@@ -278,6 +279,15 @@ public class PortDebugPanel : MonoBehaviour
                 {
                     tab_ = (Tab)i;
                     scroll_ = Vector2.zero;
+                    confirmReset_ = false;
+                }
+            }
+            // Last row has a free slot: close button (DBG button and F2 also close).
+            if ((row + 1) * perRow >= TabNames.Length)
+            {
+                if (GUILayout.Button("Close X", tabOn_, GUILayout.Height(48 * scale_)))
+                {
+                    open_ = false;
                     confirmReset_ = false;
                 }
             }
