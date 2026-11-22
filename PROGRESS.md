@@ -1,8 +1,18 @@
 # Windows port: progress log
 
-## Status
-Phases 1–3 (investigation + install checklist) are DONE (2026-11-22).
-Waiting for the user to confirm that the tools are installed before Phase 4.
+## Status (2026-11-22)
+- Phase 1–3 done. Tools installed: Unity Hub, Unity 2017.2.3f1 (licensed), AssetRipper 2.0.0.
+- Phase 4 done: project/ imports and compiles cleanly in 2017.2.3f1 (0 errors). Fixes listed in README.md.
+- Phase 5 done: Windows x86 build OK (build/win-x86, PE32 i386). x64 not needed.
+- Phase 6 in progress. Verified so far:
+  - startup on D3D11, title screen renders correctly (screenshot logs/test/10_relaunch.png)
+  - offline check passes ("Time Check is succeed")
+  - new save created; quit + relaunch -> "Data Loaded"; save decrypts to valid JSON
+  - title -> user policy -> gender select -> Main scene transition (driven by real mouse input from the user;
+    the log shows the menu changes)
+  - BgIcon tiled-image mesh overflow found in Main and fixed (tools/fix_sprites.py). NEEDS RE-CHECK in Main.
+  - Automated clicking via PostMessage does not reach Unity input (it reads the real cursor), so the
+    remaining checks are a manual pass by the user plus log review.
 
 ## Key facts (Phase 1)
 - Unity 2017.2.3f1, changeset 372229934efd (from libunity.so). Mono backend (libmono.so), .NET 3.5 profile (mscorlib 2.0).
