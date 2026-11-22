@@ -24,12 +24,18 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 | `PROGRESS.md` | Progress log |
 
 ## Build
+Close the Unity editor, then run `build.bat` (or double-click it):
 ```
-"D:\Unity\Unity\6000.6.10f1\Editor\Unity.exe" -batchmode -quit ^
-  -projectPath project -executeMethod PortBuild.BuildWin64 -logFile logs\build-x64.log
+build.bat          64-bit  -> build\win-x64\IkustellaLink.exe
+build.bat x86      32-bit  -> build\win-x86\
+build.bat all      both
 ```
-(`PortBuild.BuildWin32` for x86.) Output: `build/win-x64/`. The build script turns the splash
-off and sets the icon (`project/Assets/PcPort/app_icon.png`, from `res/drawable-xxxhdpi-v4`).
+It expects Unity 6000.6.10f1 at `D:\Unity\Unity\6000.6.10f1`; elsewhere, `set UNITY=C:\path\to\Unity.exe`
+first. Logs go to `logs\build-x64.log` / `build-x86.log`. The build turns the splash off and sets the
+icon (`project/Assets/PcPort/app_icon.png`, from the APK's `res/drawable-xxxhdpi-v4`).
+
+Editing in Visual Studio: open `project` in the Unity editor, set Edit > Preferences > External Tools >
+External Script Editor to Visual Studio, then Assets > Open C# Project (Unity generates the .sln).
 
 ## Changes from the original game
 The game logic is the original code, decompiled by AssetRipper and then tidied for reading:
