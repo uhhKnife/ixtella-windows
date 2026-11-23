@@ -5,7 +5,7 @@ public class DebugSettingToggle : SoundSettingToggleBase
     // The base class treats "muted" as toggle off. Here off = debug OFF.
     protected override bool IsMuteSaveData()
     {
-        return !PortDebug.Enabled;
+        return !DebugMode.Enabled;
     }
 
     protected override void ReflectMuteState()
@@ -14,7 +14,7 @@ public class DebugSettingToggle : SoundSettingToggleBase
 
     protected override void SaveMuteState()
     {
-        PortDebug.Set(!IsMuteState());
+        DebugMode.Set(!IsMuteState());
     }
 
     protected override string GetSettingTextId()

@@ -17,8 +17,8 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 | `project/` | Unity 6 project (AssetRipper 2.0.0 export + fixes below) |
 | `project/Assets/Scripts/Game/` | The game's own scripts |
 | `project/Assets/Scripts/SimpleAndroidNotifications/` | Notification plugin (Android-only calls) |
-| `project/Assets/Scripts/PcPort/` | PC additions: language, debug panel, sprite loading |
-| `project/Assets/Editor/PortBuild.cs` | Batch build entry points (x86 / x64) |
+| `project/Assets/Scripts/PC/` | PC additions: language, debug panel, sprite loading |
+| `project/Assets/Editor/Builder.cs` | Batch build entry points (x86 / x64) |
 | `build/` | Build output (not in git) |
 | `logs/` | Unity / player logs and test screenshots (not in git) |
 | `PROGRESS.md` | Progress log |
@@ -32,7 +32,7 @@ build.bat all      both
 ```
 It expects Unity 6000.6.10f1 at `D:\Unity\Unity\6000.6.10f1`; elsewhere, `set UNITY=C:\path\to\Unity.exe`
 first. Logs go to `logs\build-x64.log` / `build-x86.log`. The build turns the splash off and sets the
-icon (`project/Assets/PcPort/app_icon.png`, from the APK's `res/drawable-xxxhdpi-v4`).
+icon (`project/Assets/PC/app_icon.png`, from the APK's `res/drawable-xxxhdpi-v4`).
 
 Editing in Visual Studio: open `project` in the Unity editor, set Edit > Preferences > External Tools >
 External Script Editor to Visual Studio, then Assets > Open C# Project (Unity generates the .sln).
@@ -59,13 +59,13 @@ Export fixes (restoring the original data, not changing it):
   sprite rect, with borders and pivot shifted. That broke 9-sliced and tiled images (a tiled button
   background generated >65000 vertices). The original rect, border, pivot and offsets are copied
   back from the APK.
-- `PortSprites.Load`: the room backgrounds and baby sprites live in separate `<texture> 0`
+- `SpriteLoader.Load`: the room backgrounds and baby sprites live in separate `<texture> 0`
   sprite assets after export. Loading them by texture name found nothing in Unity 2017 (no room
   background on the main screen) and a wrong full-texture sprite in Unity 6. They now load the
   original sprite, so the room fills the panel as on the phone.
 
-Unity 6 upgrade: `BuildPlayer` report API in `PortBuild.cs`, `SaveAsPrefabAsset` in
-`PortLocalize.cs`; unused packages the upgrader added (Purchasing, Analytics, Timeline, ...) removed
+Unity 6 upgrade: `BuildPlayer` report API in `Builder.cs`, `SaveAsPrefabAsset` in
+`Localize.cs`; unused packages the upgrader added (Purchasing, Analytics, Timeline, ...) removed
 and Unity Connect left off, so the build stays offline.
 
 ## Languages (Japanese / English)
@@ -75,7 +75,7 @@ Windows' UI language is Japanese, otherwise English.
 - `Resources/ixtella_system_textlist_en.txt`: English for all 113 text ids, loaded on top of the
   Japanese table (`TextDatabaseSystem`). It splits on the first comma only, so English can use commas.
 - `Editor/static_text_en.json`: English for 30 strings typed into scenes and prefabs.
-  `PortLocalize.Run` attaches `LocalizedStaticText` to them and adds the language row
+  `Localize.Run` attaches `LocalizedStaticText` to them and adds the language row
   (BtnOption_7) to the options menu.
 - Not translated, by choice: credits, terms of use and privacy policy, and logos and banners (images).
 - Terminology: Master (マスター, as in the official English Fate releases), Tummy (おなか),
@@ -84,7 +84,7 @@ Windows' UI language is Japanese, otherwise English.
 
 ## Debug mode (Options > Debug)
 OFF by default and stored in PlayerPrefs like the language. With it ON:
-- the game's own debug code runs (it was behind `Debug.isDebugBuild`, now behind `PortDebug.Enabled`):
+- the game's own debug code runs (it was behind `Debug.isDebugBuild`, now behind `DebugMode.Enabled`):
   the DebugMenu overlay, keyboard shortcuts, resume and phase logs, and a parameter log on reset.
   Shortcuts: F1 overlay, F2 panel, Left/Right overlay mode, PageUp/PageDown speed, Home x100, End x1,
   Pause, Ctrl+Up skip 1000 s, hold F5/F6/F9... + Up/Down stats, Esc+Delete reset, ` log console.

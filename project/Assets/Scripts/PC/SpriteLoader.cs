@@ -2,7 +2,7 @@
 // generated full-texture sprite with the wrong size and pivot.
 using UnityEngine;
 
-public static class PortSprites
+public static class SpriteLoader
 {
     public static Sprite Load(string path)
     {

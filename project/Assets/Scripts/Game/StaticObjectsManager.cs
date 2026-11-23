@@ -12,6 +12,6 @@ public class StaticObjectsManager : SingletonMonoBehaviour<StaticObjectsManager>
 		}
 		Object.DontDestroyOnLoad(gameObject);
 		// The DebugMenu scene isn't in the build, so create its objects here.
-		PortDebug.CreateObjects();
+		DebugMode.CreateObjects();
 	}
 }

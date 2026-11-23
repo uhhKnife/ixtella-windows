@@ -123,7 +123,7 @@ public class SwipeCharacterController : SwipeObjectBase
 		}
 		else
 		{
-			image.sprite = PortSprites.Load(MenuCommonData.GetCharaSpriteFilename(charaId));
+			image.sprite = SpriteLoader.Load(MenuCommonData.GetCharaSpriteFilename(charaId));
 		}
 	}
 

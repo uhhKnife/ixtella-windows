@@ -34,11 +34,11 @@ exit /b 1
 :build
 set "LOG=%ROOT%logs\build-%2.log"
 echo Building %2 (takes a few minutes, close the Unity editor first)...
-"%UNITY%" -batchmode -quit -projectPath "%ROOT%project" -executeMethod PortBuild.Build%1 -logFile "%LOG%"
+"%UNITY%" -batchmode -quit -projectPath "%ROOT%project" -executeMethod Builder.Build%1 -logFile "%LOG%"
 if errorlevel 1 (
     echo.
     echo %2 build FAILED. Errors:
-    findstr /c:"error CS" /c:"[PortBuild] FAILED" /c:"another Unity instance" "%LOG%"
+    findstr /c:"error CS" /c:"[Builder] FAILED" /c:"another Unity instance" "%LOG%"
     echo Full log: %LOG%
     exit /b 1
 )

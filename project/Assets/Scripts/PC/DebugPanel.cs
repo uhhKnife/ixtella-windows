@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PortDebugPanel : MonoBehaviour
+public class DebugPanel : MonoBehaviour
 {
     public enum Tab { Info, Time, Stats, Costume, Day, Anim, Misc }
     private static readonly string[] TabNames = { "Info", "Time", "Stats", "Costume", "Day", "Anim", "Misc" };
 
-    private static PortDebugPanel instance_;
+    private static DebugPanel instance_;
 
     private DebugMenu menu_;
     private DebugPlayerActionSender sender_;
@@ -48,7 +48,7 @@ public class PortDebugPanel : MonoBehaviour
 
     public static void TogglePanel()
     {
-        if (instance_ != null && PortDebug.Enabled)
+        if (instance_ != null && DebugMode.Enabled)
         {
             instance_.open_ = !instance_.open_;
             instance_.confirmReset_ = false;
@@ -126,7 +126,7 @@ public class PortDebugPanel : MonoBehaviour
 
     private void Update()
     {
-        bool visible = PortDebug.Enabled;
+        bool visible = DebugMode.Enabled;
         if (!visible)
         {
             open_ = false;
@@ -211,7 +211,7 @@ public class PortDebugPanel : MonoBehaviour
 
     private void OnGUI()
     {
-        if (!PortDebug.Enabled)
+        if (!DebugMode.Enabled)
         {
             return;
         }
@@ -310,7 +310,7 @@ public class PortDebugPanel : MonoBehaviour
     {
         toast_ = msg;
         toastUntil_ = Time.unscaledTime + 2f;
-        Debug.Log("[PortDebug] " + msg);
+        Debug.Log("[DebugMode] " + msg);
     }
 
 
@@ -652,7 +652,7 @@ public class PortDebugPanel : MonoBehaviour
         buttonBlocker_ = MakeBlockerImage("ButtonBlocker").rectTransform;
         panelBlocker_ = MakeBlockerImage("PanelBlocker").gameObject;
         panelBlocker_.SetActive(false);
-        buttonBlocker_.gameObject.SetActive(PortDebug.Enabled);
+        buttonBlocker_.gameObject.SetActive(DebugMode.Enabled);
         LayoutBlockers();
     }
 

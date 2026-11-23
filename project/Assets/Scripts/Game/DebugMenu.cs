@@ -49,7 +49,7 @@ public class DebugMenu : MonoBehaviour
 
 	private void Start()
 	{
-		// May be null on the title screen; PortDebugPanel refreshes these on scene load.
+		// May be null on the title screen; DebugPanel refreshes these on scene load.
 		timeObserber_ = UnityEngine.Object.FindAnyObjectByType<DateTimeObserber>();
 		GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
 		eventScheduler_ = (gameController != null) ? gameController.GetComponent<EventScheduler>() : null;
@@ -58,7 +58,7 @@ public class DebugMenu : MonoBehaviour
 	private void Update()
 	{
 		// No swipe gestures: on PC they'd fire on every mouse drag.
-		if (!PortDebug.Enabled)
+		if (!DebugMode.Enabled)
 		{
 			return;
 		}
@@ -86,7 +86,7 @@ public class DebugMenu : MonoBehaviour
 			{
 				actionPanel_.SetActive(showActionPanel_);
 			}
-			PortDebugPanel.TogglePanel();
+			DebugPanel.TogglePanel();
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
@@ -178,7 +178,7 @@ public class DebugMenu : MonoBehaviour
 	private void OnGUI()
 	{
 		// EventScheduler only exists on the main screen.
-		if (isShow_ && PortDebug.Enabled && eventScheduler_ != null && timeObserber_ != null)
+		if (isShow_ && DebugMode.Enabled && eventScheduler_ != null && timeObserber_ != null)
 		{
 			ShowFps();
 			ShowKeyHelp();

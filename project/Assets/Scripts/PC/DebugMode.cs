@@ -1,9 +1,9 @@
 // Options > Debug. Replaces Debug.isDebugBuild in the game code. Off by default.
 using UnityEngine;
 
-public static class PortDebug
+public static class DebugMode
 {
-    private const string PREF_KEY = "PcPortDebug";
+    private const string PREF_KEY = "DebugMode";
 
     private static bool loaded_;
 
@@ -44,7 +44,7 @@ public static class PortDebug
             {
                 root_.GetComponent<DebugMenu>().isShow_ = false;
             }
-            PortDebugPanel.Close();
+            DebugPanel.Close();
         }
     }
 
@@ -62,6 +62,6 @@ public static class PortDebug
         root_.AddComponent<DebugPlayerActionSender>();
         Assets.Scripts.Common.DebugConsole console = root_.AddComponent<Assets.Scripts.Common.DebugConsole>();
         console.Show = false;
-        root_.AddComponent<PortDebugPanel>();
+        root_.AddComponent<DebugPanel>();
     }
 }

@@ -11,7 +11,7 @@ public static class Localization
         English = 1
     }
 
-    private const string PREF_KEY = "PcPortLanguage";
+    private const string PREF_KEY = "Language";
 
     private const string ENGLISH_SUFFIX = "_en";
 

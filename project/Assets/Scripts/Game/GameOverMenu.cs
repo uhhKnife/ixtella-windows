@@ -37,7 +37,7 @@ public class GameOverMenu : GameEndMenuBase
 	protected override int GetTextStartIndex()
 	{
 		GameController.GameState key = SingletonMonoBehaviour<GameController>.Instance.GetGameState();
-		if (PortDebug.Enabled && !TEXT_START_INDEX_LIST.ContainsKey(key))
+		if (DebugMode.Enabled && !TEXT_START_INDEX_LIST.ContainsKey(key))
 		{
 			Debug.LogWarning("[" + GetType().ToString() + "] Error: invalid game over state " + key);
 			key = (GameController.GameState)Random.Range(2, 5);

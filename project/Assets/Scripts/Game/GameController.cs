@@ -185,7 +185,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
 	private void FinalizeGame()
 	{
-		if (PortDebug.Enabled)
+		if (DebugMode.Enabled)
 		{
 			SavePlayLog();
 		}
@@ -233,7 +233,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
 	private void SavePlayLog()
 	{
-		if (!PortDebug.Enabled)
+		if (!DebugMode.Enabled)
 		{
 			return;
 		}

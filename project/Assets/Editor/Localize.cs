@@ -1,5 +1,5 @@
 // Adds the Language/Debug option rows and tags hardcoded Japanese UI text for translation.
-// Unity.exe -batchmode -quit -projectPath <project> -executeMethod PortLocalize.Run -logFile <log>
+// Unity.exe -batchmode -quit -projectPath <project> -executeMethod Localize.Run -logFile <log>
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public static class PortLocalize
+public static class Localize
 {
     [Serializable]
     private class Entry
@@ -61,12 +61,12 @@ public static class PortLocalize
             }
         }
         AssetDatabase.SaveAssets();
-        Debug.Log("[PortLocalize] LocalizedStaticText added/updated: " + added_);
+        Debug.Log("[Localize] LocalizedStaticText added/updated: " + added_);
         foreach (string u in untranslated_)
         {
-            Debug.Log("[PortLocalize] untranslated static text: " + u);
+            Debug.Log("[Localize] untranslated static text: " + u);
         }
-        Debug.Log("[PortLocalize] done");
+        Debug.Log("[Localize] done");
     }
 
     private static string Key(string s)
@@ -124,7 +124,7 @@ public static class PortLocalize
         GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(OptionPrefabPath);
         if (prefab.transform.Find(rowName) != null)
         {
-            Debug.Log("[PortLocalize] " + rowName + " already present");
+            Debug.Log("[Localize] " + rowName + " already present");
             return;
         }
         GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
@@ -136,6 +136,6 @@ public static class PortLocalize
         row.AddComponent(toggleType);
         PrefabUtility.SaveAsPrefabAsset(instance, OptionPrefabPath);
         UnityEngine.Object.DestroyImmediate(instance);
-        Debug.Log("[PortLocalize] added " + rowName + " (" + toggleType.Name + ")");
+        Debug.Log("[Localize] added " + rowName + " (" + toggleType.Name + ")");
     }
 }

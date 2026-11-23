@@ -120,7 +120,7 @@ public abstract class ButtonBase : MonoBehaviour
 		if (iconObject != null)
 		{
 			Image componentInChildren = iconObject.GetComponentInChildren<Image>();
-			componentInChildren.sprite = PortSprites.Load(MenuCommonData.GetButtonIconFilename(iconType));
+			componentInChildren.sprite = SpriteLoader.Load(MenuCommonData.GetButtonIconFilename(iconType));
 		}
 	}
 

@@ -251,7 +251,7 @@ public class PlayerStatusManager : SingletonMonoBehaviour<PlayerStatusManager>
 
 	private void Update()
 	{
-		if (PortDebug.Enabled)
+		if (DebugMode.Enabled)
 		{
 			DebugInput();
 		}

@@ -77,7 +77,7 @@ public class DateTimeObserber : MonoBehaviour
 
 	private void Update()
 	{
-		if (PortDebug.Enabled)
+		if (DebugMode.Enabled)
 		{
 			input();
 		}
