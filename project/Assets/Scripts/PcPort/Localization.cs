@@ -53,13 +53,6 @@ public static class Localization
         PlayerPrefs.Save();
     }
 
-    // Use a language for this run only, without saving it (PortTour).
-    public static void OverrideForSession(Language language)
-    {
-        current_ = language;
-        loaded_ = true;
-    }
-
     // Resources name of the English version of a text file.
     public static string EnglishFile(string baseName)
     {

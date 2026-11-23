@@ -48,13 +48,6 @@ public static class PortDebug
         }
     }
 
-    // Use debug mode for this run only, without saving it (PortTour).
-    public static void OverrideForSession(bool on)
-    {
-        enabled_ = on;
-        loaded_ = true;
-    }
-
     // Replaces the original LoadScene("DebugMenu") in StaticObjectsManager.Awake.
     public static void CreateObjects()
     {

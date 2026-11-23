@@ -17,7 +17,7 @@ Save: `%USERPROFILE%\AppData\LocalLow\Marvelous Inc_\育ステラ\FixlSavedata.j
 | `project/` | Unity 6 project (AssetRipper 2.0.0 export + fixes below) |
 | `project/Assets/Scripts/Game/` | The game's own scripts |
 | `project/Assets/Scripts/SimpleAndroidNotifications/` | Notification plugin (Android-only calls) |
-| `project/Assets/Scripts/PcPort/` | PC additions: language, debug panel, sprite loading, screenshot tour |
+| `project/Assets/Scripts/PcPort/` | PC additions: language, debug panel, sprite loading |
 | `project/Assets/Editor/PortBuild.cs` | Batch build entry points (x86 / x64) |
 | `build/` | Build output (not in git) |
 | `logs/` | Unity / player logs and test screenshots (not in git) |
@@ -81,10 +81,6 @@ Windows' UI language is Japanese, otherwise English.
 - Terminology: Master (マスター, as in the official English Fate releases), Tummy (おなか),
   Happiness (しあわせ), Strength / Intelligence / Magic (たいりょく / ちりょく / まりょく);
   Nero's 奏者 = "Praetor", Gilgamesh's 雑種 = "mongrel" (established English renderings).
-
-Layout check: `IkustellaLink.exe -porttour -porttour-lang en|ja -porttour-out <dir>` opens every
-menu, help page, dialog, choice dialog and game-over/clear screen and saves screenshots.
-Back up `FixlSavedata.json` first: the tour changes game state in memory and the game may autosave.
 
 ## Debug mode (Options > Debug)
 OFF by default and stored in PlayerPrefs like the language. With it ON:

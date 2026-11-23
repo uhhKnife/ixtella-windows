@@ -64,25 +64,6 @@ public class PortDebugPanel : MonoBehaviour
         }
     }
 
-    // PortTour
-    public static void ShowTab(Tab tab)
-    {
-        if (instance_ != null)
-        {
-            instance_.open_ = true;
-            instance_.tab_ = tab;
-            instance_.scroll_ = Vector2.zero;
-        }
-    }
-
-    public static void SetOverlay(bool on)
-    {
-        if (instance_ != null && instance_.menu_ != null)
-        {
-            instance_.menu_.isShow_ = on;
-        }
-    }
-
 
     private void Awake()
     {
